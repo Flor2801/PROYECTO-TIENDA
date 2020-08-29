@@ -2,24 +2,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
 
 body {
-    background-color: #fafafa;
+    background-color: #e4e4e4;
     font-family: 'Montserrat', sans-serif;
 }
 
+
+
+
 .nav-bar {
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 25px;
-    background-color: rgb(255, 17, 0);
-
+    padding: 10px 20px 10px 20px;
 }
+
+
+
+
+
+
 
 .home {
     background-color: rgb(255, 123, 0);
-    height: 300px;
+    height: 280px;
     margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.home p {
+    font-size: 32px;
+    font-weight: 800;
+
+}
+
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.carrito {
+    display: flex;
+    flex-direction: row;
+
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .principal {
@@ -36,7 +73,7 @@ body {
     flex-grow: 1;
     font-weight: 700;
     padding: 10px;
-    background-color: yellow;
+    background-color: grey;
 }
 
 
@@ -78,8 +115,12 @@ body {
 }
 
 
+
+
+
 .productos {
-    flex-grow: 3;
+     margin: 0px 10px 0px 10px;
+    
 }
 
 
@@ -88,8 +129,33 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0px 10px 20px 10px;
     background-color: white;
+}
+
+.vista-productos p {
+    font-size: 15px;
+}
+
+
+.menu-vistas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 180px;
+    justify-content: space-evenly;
+
+}
+
+#grid {
+    width: 20px;
+
+}
+
+#list {
+
+    width: 20px;
+
 }
 
 
@@ -97,7 +163,10 @@ body {
     margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    
 }
+
 
 .tarjeta {
     background-color: white;
@@ -106,17 +175,84 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 30px 30px 50px 30px;
+    
 }
 
 .foto-producto {
-    width: 150px;
-    height: 200px;
-    background-color: red;
+    width: 250px;
+    height: 250px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.img-prd {
+    height: 100%;
 }
 
 .desc-producto {
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+
+.title, .precio, .calificacion {
+    padding: 5px;
+    margin: 0px;
+  
+}
+
+.title > p {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.precio > p {
+    margin: 0px;
+    font-size: 15px;
+}
+.calificacion > p {
+    margin: 0px;
+}
+
+.calificacion {
+    margin: 10px;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+
+#starfull {
+   
+    width: 18px;
+
+}
+
+#starvacia {
+
+    width: 18px;
+
+
+}
+
+.comprar {
+    background-color: rgb(199, 199, 199);
+    font-size: 13px;
+    font-weight: 600;
+    align-self: stretch;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.comprar > p {
+    margin: 0px;
 }
 
 
@@ -125,6 +261,14 @@ body {
 
 footer {
     background-color: white;
-    padding: 80px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
 
+footer  p {
+    font-size: 15px;
+    font-weight: 500;
 }
