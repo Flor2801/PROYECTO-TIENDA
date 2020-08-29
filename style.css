@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+
+body {
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bar {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: rgb(255, 17, 0);
+
+}
+
+.home {
+    background-color: rgb(255, 123, 0);
+    height: 300px;
+    margin-bottom: 80px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px 0px 5px;
+  
+}
+
+.menu-filtros {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 10px;
+    background-color: yellow;
+}
+
+
+.filtros {
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    background-color: blue;
+
+
+
+}
+
+
+.busqueda {
+    display: flex;
+    padding: 15px 30px 15px 30px;
+    flex-direction: column;
+    background-color: red;
+
+}
+
+
+.categoria {
+    display: flex;
+    padding: 15px 30px 15px 30px;
+    flex-direction: column;
+    background-color: blue;
+
+}
+
+
+.puntaje {
+    display: flex;
+    padding: 15px 30px 15px 30px;
+    flex-direction: column;
+    background-color: red;
+
+}
+
+
+.productos {
+    flex-grow: 3;
+}
+
+
+.vista-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+
+.catalogo-productos{    
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.foto-producto {
+    width: 150px;
+    height: 200px;
+    background-color: red;
+}
+
+.desc-producto {
+    padding: 10px;
+}
+
+
+
+
+
+footer {
+    background-color: white;
+    padding: 80px;
+
+}
