@@ -4,6 +4,7 @@
 body {
     background-color: #e4e4e4;
     font-family: 'Montserrat', sans-serif;
+    margin: 0px;
 }
 
 
@@ -52,7 +53,6 @@ body {
 .carrito {
     display: flex;
     flex-direction: row;
-
     width: 180px;
     display: flex;
     justify-content: space-between;
@@ -62,64 +62,157 @@ body {
 .principal {
     display: flex;
     flex-direction: row;
-    margin: 0px 5px 0px 5px;
-  
+    margin: 0px;
 }
 
-.menu-filtros {
+
+
+.menu {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     font-weight: 700;
     padding: 10px;
-    background-color: grey;
+    padding-top: 0px;
+    margin-left: 10px;
+  
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: 600;
 }
 
 
-.filtros {
+.filtro {
     display: flex;
-    padding: 20px;
-    flex-direction: row;
+    width: 200px;
+    padding: 10px;
     background-color: blue;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
 
+}
 
+.filtro > #f {
+    justify-self: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+    flex-grow: 1;
+}
 
+.filtro > #l {
+    font-size: 12px;
+    font-weight: 300;
+    flex-grow: 3;
+ 
+    
+}
+
+#trash {
+    width: 15px;
 }
 
 
 .busqueda {
     display: flex;
-    padding: 15px 30px 15px 30px;
+    padding: 10px 10px 20px 10px;
     flex-direction: column;
-    background-color: red;
-
 }
+
+
+.search {
+    width: 100%;
+    height: 40px;
+    border-bottom: solid black 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#lupa {
+    width: 18px;
+    padding: 12px ;
+}
+
 
 
 .categoria {
     display: flex;
-    padding: 15px 30px 15px 30px;
+    padding: 10px 10px 20px 10px;
     flex-direction: column;
-    background-color: blue;
+
+
+
 
 }
+
+.categoria > .titulo {
+    margin-bottom: 12px;
+}
+
+
+
+.contenedor-items {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.cat-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.cat-item > p {
+    font-size: 12px;
+    margin: 0px;
+    margin-right: 10px;
+    
+}
+
+.cat-item > input {
+    margin-right: 10px;
+}
+
+.cat-item .grupo {
+    margin-right: 10px;
+    
+}
+
 
 
 .puntaje {
     display: flex;
-    padding: 15px 30px 15px 30px;
+    padding: 10px 10px 20px 10px;
     flex-direction: column;
-    background-color: red;
+  
 
 }
+
+.puntaje > .titulo {
+    margin-bottom: 12px;
+}
+
+.puntaje #starvacia {
+    width: 15px;
+}
+
+
+
+
 
 
 
 
 
 .productos {
-     margin: 0px 10px 0px 10px;
+     margin: 0px 5px 0px 5px;
     
 }
 
