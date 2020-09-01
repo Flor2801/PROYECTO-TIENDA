@@ -1,12 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
 body {
-    background-color: #e4e4e4;
+    background-color: #f1f1f1;
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
 }
-
 
 
 
@@ -15,28 +15,23 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 20px 10px 20px;
+    background-color:white;
 }
 
 
-
-
-
-
-
 .home {
-    background-color: rgb(255, 123, 0);
-    height: 280px;
+    background-color:rgb(179, 179, 179);
+    height: 300px;
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url();
 }
 
 .home p {
     font-size: 32px;
     font-weight: 800;
-
 }
 
 
@@ -47,16 +42,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .carrito {
     display: flex;
     flex-direction: row;
-    width: 180px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.carrito  p {
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .principal {
@@ -64,7 +63,6 @@ body {
     flex-direction: row;
     margin: 0px;
 }
-
 
 
 .menu {
@@ -76,7 +74,6 @@ body {
     padding: 10px;
     padding-top: 0px;
     margin-left: 10px;
-  
 }
 
 .titulo {
@@ -88,28 +85,29 @@ body {
 .filtro {
     display: flex;
     width: 200px;
-    padding: 10px;
-    background-color: blue;
+    padding: 15px 15px 15px 10px;
     align-items: center;
-    justify-content: flex-end;
-    margin-bottom: 10px;
-
+    justify-content: space-between;
+    margin-bottom: 5px;
 }
+
 
 .filtro > #f {
-    justify-self: flex-start;
+
     font-size: 18px;
-    font-weight: 600;
-    flex-grow: 1;
+    font-weight: 700;
+    flex-grow: 3;
 }
 
-.filtro > #l {
+
+#l {
+    flex-grow: 1;
+    display: flex;
     font-size: 12px;
     font-weight: 300;
-    flex-grow: 3;
- 
-    
+    justify-content: space-around;
 }
+
 
 #trash {
     width: 15px;
@@ -122,13 +120,13 @@ body {
     flex-direction: column;
 }
 
+.busqueda .titulo {
+   margin-bottom: 20px;
+}
+
 
 .search {
-    width: 100%;
-    height: 40px;
-    border-bottom: solid black 2px;
-    display: flex;
-    justify-content: flex-end;
+  
 }
 
 
@@ -137,16 +135,10 @@ body {
     padding: 12px ;
 }
 
-
-
 .categoria {
     display: flex;
     padding: 10px 10px 20px 10px;
     flex-direction: column;
-
-
-
-
 }
 
 .categoria > .titulo {
@@ -154,26 +146,22 @@ body {
 }
 
 
-
 .contenedor-items {
     display: flex;
     flex-direction: column;
-
 }
-
 
 .cat-item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 }
 
 .cat-item > p {
     font-size: 12px;
     margin: 0px;
     margin-right: 10px;
-    
+    font-weight: 500;
 }
 
 .cat-item > input {
@@ -181,39 +169,31 @@ body {
 }
 
 .cat-item .grupo {
-    margin-right: 10px;
-    
+    margin-right: 10px;   
 }
-
 
 
 .puntaje {
     display: flex;
     padding: 10px 10px 20px 10px;
     flex-direction: column;
-  
-
 }
 
 .puntaje > .titulo {
     margin-bottom: 12px;
 }
 
-.puntaje #starvacia {
-    width: 15px;
+
+
+.fa-star{
+    color: #F1C410;
+    font-size: 12px;
 }
-
-
-
-
-
-
 
 
 
 .productos {
      margin: 0px 5px 0px 5px;
-    
 }
 
 
@@ -221,15 +201,15 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
-    margin: 0px 10px 20px 10px;
+    padding: 25px;
+    margin: 0px 10px 10px 10px;
     background-color: white;
 }
 
 .vista-productos p {
     font-size: 15px;
+    font-weight: 300;
 }
-
 
 .menu-vistas {
     display: flex;
@@ -237,18 +217,15 @@ body {
     align-items: center;
     width: 180px;
     justify-content: space-evenly;
-
+    border-radius: 3px;
 }
 
 #grid {
     width: 20px;
-
 }
 
 #list {
-
     width: 20px;
-
 }
 
 
@@ -257,7 +234,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    
 }
 
 
@@ -269,15 +245,16 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 30px 30px 50px 30px;
-    
+    flex: 1;
+    border-radius: 3px;
 }
 
 .foto-producto {
-    width: 250px;
-    height: 250px;
-    
+    width: 215px;
+    height: 215px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .img-prd {
@@ -296,17 +273,18 @@ body {
 .title, .precio, .calificacion {
     padding: 5px;
     margin: 0px;
-  
 }
 
 .title > p {
     margin: 0px;
     font-size: 18px;
     font-weight: 600;
+    text-align: center;
 }
 .precio > p {
     margin: 0px;
     font-size: 15px;
+    font-weight: 300;
 }
 .calificacion > p {
     margin: 0px;
@@ -322,22 +300,17 @@ body {
 }
 
 #starfull {
-   
     width: 18px;
-
 }
 
 #starvacia {
-
     width: 18px;
-
-
 }
 
 .comprar {
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(243, 243, 243);
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 400;
     align-self: stretch;
     padding: 20px;
     text-align: center;
@@ -348,20 +321,30 @@ body {
     margin: 0px;
 }
 
+#cam {
+    height: 90%;
+}
+
+#mac {
+    height: 70%;
+}
 
 
-
-
-footer {
+.foot {
     background-color: white;
     padding: 40px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
    
 }
 
+.foot > div {
+    margin: 10px;
+}
+
 footer  p {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 300;
 }
