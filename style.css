@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -33,7 +32,6 @@ body {
     font-size: 32px;
     font-weight: 800;
 }
-
 
 .logo{
     display: flex;
@@ -64,7 +62,6 @@ body {
     margin: 0px;
 }
 
-
 .menu {
     flex-grow: 1;
     display: flex;
@@ -93,7 +90,6 @@ body {
 
 
 .filtro > #f {
-
     font-size: 18px;
     font-weight: 700;
     flex-grow: 3;
@@ -113,7 +109,6 @@ body {
     width: 15px;
 }
 
-
 .busqueda {
     display: flex;
     padding: 10px 10px 20px 10px;
@@ -124,10 +119,6 @@ body {
    margin-bottom: 20px;
 }
 
-
-.search {
-  
-}
 
 
 #lupa {
@@ -183,14 +174,10 @@ body {
     margin-bottom: 12px;
 }
 
-
-
 .fa-star{
     color: #F1C410;
     font-size: 12px;
 }
-
-
 
 .productos {
      margin: 0px 5px 0px 5px;
@@ -228,14 +215,12 @@ body {
     width: 20px;
 }
 
-
 .catalogo-productos{    
     margin-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
 }
-
 
 .tarjeta {
     background-color: white;
@@ -248,6 +233,11 @@ body {
     flex: 1;
     border-radius: 3px;
 }
+
+.hidden {
+    display: none;
+}
+
 
 .foto-producto {
     width: 215px;
@@ -329,7 +319,6 @@ body {
     height: 70%;
 }
 
-
 .foot {
     background-color: white;
     padding: 40px;
@@ -337,7 +326,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-   
 }
 
 .foot > div {

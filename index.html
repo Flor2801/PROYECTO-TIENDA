@@ -73,8 +73,8 @@
 
 
                 <div class="search"> 
-                    <form>
-                    <input type="text"name="busqueda" placeholder="Buscar productos"/>
+                    <form id="search">
+                    <input type="text" name="busqueda" id="search" placeholder="Buscar productos"/>
                   </form>
                 </label>
 
@@ -124,7 +124,7 @@
                 <div class="contenedor-items">
 
                     <div class="cat-item">
-                        <input type="checkbox" name="puntaje">
+                        <input type="checkbox" name="puntaje" class="puntaje-review" id="checkbox-1">
                         <div class="grupo">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -136,7 +136,7 @@
                     </div>
 
                     <div class="cat-item">
-                        <input type="checkbox" name="puntaje">
+                        <input type="checkbox" name="puntaje" class="puntaje-review" id="checkbox-4">
                         <div class="grupo"><i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -146,7 +146,8 @@
                         <p>(4)</p>
                     </div>
 
-                    <div class="cat-item"><input type="checkbox" name="puntaje">
+                    <div class="cat-item">
+                        <input type="checkbox" name="puntaje" class="puntaje-review" id="checkbox-3">
                         <div class="grupo"> <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -156,7 +157,7 @@
                         <p>(3)</p>
                     </div>
 
-                    <div class="cat-item"><input type="checkbox" name="puntaje">
+                    <div class="cat-item"><input type="checkbox" name="puntaje" class="puntaje-review" id="checkbox-2">
                         <div class="grupo">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -167,7 +168,7 @@
                         <p>(2)</p>
                     </div>
 
-                    <div class="cat-item"><input type="checkbox" name="puntaje">
+                    <div class="cat-item"><input type="checkbox" name="puntaje" class="puntaje-review" id="checkbox-1">
                         <div class="grupo">
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
@@ -216,7 +217,7 @@
                 </div>
 
                 <div class="catalogo-productos">
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -241,7 +242,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="play" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/play.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -266,7 +267,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="nokia" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -291,7 +292,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -316,7 +317,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="3">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -341,7 +342,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="5">
                         <div class="foto-producto"> <img class="img-prd" id="cam" src="IMAGENES/camara.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -366,7 +367,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/samsung1.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -391,7 +392,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" id="mac" src="IMAGENES/mac.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -416,7 +417,7 @@
                         </div>
                     </div>
 
-                    <div class="tarjeta">
+                    <div class="tarjeta" data-nombre="samsung" data-rating="4">
                         <div class="foto-producto"> <img class="img-prd" src="IMAGENES/headphones.jpg"> </div>
                         <div class="desc-producto">
                             <div class="title">
@@ -462,7 +463,7 @@
     </footer>
 
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 
