@@ -56,6 +56,11 @@ body {
     font-weight: 300;
 }
 
+
+
+
+
+
 .principal {
     display: flex;
     flex-direction: row;
@@ -63,10 +68,8 @@ body {
 }
 
 .menu {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     font-weight: 700;
     padding: 10px;
     padding-top: 0px;
@@ -120,7 +123,6 @@ body {
 }
 
 
-
 #lupa {
     width: 18px;
     padding: 12px ;
@@ -163,7 +165,6 @@ body {
     margin-right: 10px;   
 }
 
-
 .puntaje {
     display: flex;
     padding: 10px 10px 20px 10px;
@@ -179,8 +180,10 @@ body {
     font-size: 12px;
 }
 
-.productos {
-     margin: 0px 5px 0px 5px;
+
+.shop {
+    flex: 1;
+    margin: 0px 5px 0px 5px;   
 }
 
 
@@ -215,29 +218,32 @@ body {
     width: 20px;
 }
 
-.catalogo-productos{    
-    margin-bottom: 100px;
+
+
+
+
+.catalogo {    
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
-}
+    justify-content: space-between;
+    margin: 20px 0px 100px 0px;
+    }
 
 .tarjeta {
     background-color: white;
+    width: 250px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 30px 30px 50px 30px;
-    flex: 1;
     border-radius: 3px;
 }
 
 .hidden {
     display: none;
 }
-
 
 .foto-producto {
     width: 215px;
@@ -258,7 +264,6 @@ body {
     align-items: center;
     justify-content: stretch;
 }
-
 
 .title, .precio, .calificacion {
     padding: 5px;
@@ -318,6 +323,9 @@ body {
 #mac {
     height: 70%;
 }
+
+
+
 
 .foot {
     background-color: white;
