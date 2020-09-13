@@ -102,7 +102,7 @@ const overlay = document.getElementById("overlay");
 
 carrito.onclick = () => {
   overlay.classList.remove("hidden");
-  menu.classList.remove("hidden");
+  
 };
 
 cerrar.onclick = () => {
