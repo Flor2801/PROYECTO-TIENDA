@@ -8,12 +8,11 @@ body {
 }
 
 .nav-bar {
-  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 20px 10px 20px;
-  background-color: white;
+  background-color: #f1f1f1;
 }
 
 .home {
@@ -23,8 +22,7 @@ body {
   align-items: center;
   overflow: hidden;
   margin: 0px;
-  margin-bottom: 80px; 
- 
+  margin-bottom: 80px;
 }
 
 .home p {
@@ -33,12 +31,14 @@ body {
   position: relative;
   right: 500px;
   color: white;
-
 }
 
 #fondo {
-    object-fit: cover;
-    width: 130%;
+  object-fit: cover;
+  width: 125%;
+  position: relative;
+  top: 90px;
+  opacity: 0.9
 }
 
 
@@ -46,21 +46,19 @@ body {
   display: flex;
   flex-direction: row;
   width: 120px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 10px;
 }
 
-
 .LogoAda {
-  width: 20px;
+  width: 23px;
 }
 
 #LogoAda {
   width: 100%;
 }
-
 
 .carrito {
   display: flex;
@@ -77,47 +75,216 @@ body {
 }
 
 .overlay {
-    width: 100vw; 
-    height: 100vh; 
-    background-color: rgba(0, 0, 0, 0.37); 
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.37);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .menu-compra {
-    width: 400px;
-    height: 100vh;
-    background-color: hotpink;
-    position: absolute;
-    right: 0;
-    top: 0;
-    position: absolute;
-    z-index: 2;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
 }
 
 .menu-compra p {
-    position: relative;
-    left: 20px;
-    top: 10px;
-    font-size: 25px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
+  position: relative;
+  left: 20px;
+  top: 10px;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
-
 .menu-compra > #descripcion-carrito {
-    font-size: 18px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
 }
 
 .fa-times-circle {
-    font-size: 30px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.modal-compra {
+  background-color: rgba(15, 15, 15, 0.342);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+
+.checkout {
+  background-color: white;
+  width: 800px;
+  height: 100vh;
+  position: absolute;
+  margin-left: 250px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-datospersonales-y-pago {
+  display: flex;
+  height: 80%;
+  padding: 30px 35px 30px 45px;
+}
+
+.datos-personales-y-pago {
+  width: 60%;
+}
+
+.nombre-y-mail {
+  margin-top: 30px;
+
+}
+
+.nombre-y-mail label {
+  margin-top: 10px;
+}
+
+
+.info-personal {
+  width: 370px;
+  height: 50%;
+  border-bottom: 1px rgb(228, 227, 227) solid;
+  
+}
+.info-personal p {
+  margin: 0px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.info-personal label {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+.info-personal input {
+  border: none;
+  border-bottom: 1px grey solid;
+  width: 80%;
+  
+}
+
+.info-personal ::placeholder {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+
+}
+
+
+.pago-y-envio {
+  margin-top: 30px;
+}
+
+.opciones-pago {
+  height: 50%;
+  padding-top: 10px;
+}
+
+.opciones-pago p {
+  margin: 30px 0px 30px 0px;
+
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.opciones-lista label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.resumen {
+  background-color: #f5f5f5;
+  width: 40%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+}
+
+.resumen-titulo {
+  height: 75%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.resumen-subtotal {
+  font-size: 16px;
+}
+
+.resumen-total {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.resumen-subtotal p{
+  margin: 12px;
+}
+
+.resumen-total p{
+  margin: 12px;
+}
+
+.botones {
+  background-color: white;
+  height: 20%;
+  position: relative;
+}
+
+.botones > .seguir {
+  border: solid black 2px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 40px;
+  right: 250px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.botones > .finalizar {
+  border: solid #43a047 2px;
+  background-color: #43a047;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 15px;
+  color: #f1f1f1;
+}
+
+.botones p {
+  margin: 0px;
+  font-size: 12px;
+  
 }
 
 .principal {
@@ -206,6 +373,7 @@ body {
   position: relative;
   top: -30px;
   left: 170px;
+  z-index: 0;
 }
 
 .categoria {
@@ -418,8 +586,6 @@ footer p {
   font-weight: 300;
 }
 
-
 .fa-heart {
   color: green;
-
 }

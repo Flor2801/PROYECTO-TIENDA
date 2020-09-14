@@ -68,6 +68,8 @@ for (let checkbox of filtroRating) {
   // se cierra checkbox.onclic
 }
 
+
+
 //////////////////////////   LIMPIAR   /////////////////////////////////
 /*
 limpiar.onclick = () => {
