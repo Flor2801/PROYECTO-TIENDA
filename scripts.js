@@ -101,9 +101,11 @@ const carrito = document.getElementById("abrir-carrito");
 const menu = document.getElementById("menu-compra");
 const cerrar = document.getElementById("cerrar");
 const overlay = document.getElementById("overlay");
+const body = document.getElementsByTagName('body');
 
 carrito.onclick = () => {
   overlay.classList.remove("hidden");
+  body.classList.add("no-scroll");
   
 };
 

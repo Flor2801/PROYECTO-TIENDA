@@ -7,6 +7,9 @@ body {
   margin: 0px;
 }
 
+
+
+
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -14,6 +17,8 @@ body {
   padding: 10px 20px 10px 20px;
   background-color: #f1f1f1;
 }
+
+
 
 .home {
   height: 300px;
@@ -23,23 +28,43 @@ body {
   overflow: hidden;
   margin: 0px;
   margin-bottom: 80px;
+  position: relative;
 }
 
 .home p {
   font-size: 32px;
   font-weight: 800;
-  position: relative;
   right: 500px;
   color: white;
+  position: relative;
+  transform: translateX(200%);
+
 }
 
 #fondo {
   object-fit: cover;
-  width: 125%;
-  position: relative;
-  top: 90px;
-  opacity: 0.9
+  width: 1450px;
+  position: absolute;
+  top: -110px;
+  left: 0;
+  z-index: -3;
+  
 }
+
+.degradado {
+  height: 300px;
+  width: 100vw;
+  background: linear-gradient(to right top, #05193799, #004d7a99, #00879399, #a900bf99, #eb12d999);
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.3;
+  z-index: -2;
+
+}
+
+
+
 
 
 .logo {
@@ -73,6 +98,10 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
+
+
+
+
 
 .overlay {
   width: 100vw;
@@ -116,6 +145,15 @@ body {
   right: 20px;
   top: 20px;
 }
+
+
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+
 
 .modal-compra {
   background-color: rgba(15, 15, 15, 0.342);
@@ -287,6 +325,9 @@ body {
   
 }
 
+
+
+
 .principal {
   display: flex;
   flex-direction: row;
@@ -373,7 +414,7 @@ body {
   position: relative;
   top: -30px;
   left: 170px;
-  z-index: 0;
+ 
 }
 
 .categoria {
