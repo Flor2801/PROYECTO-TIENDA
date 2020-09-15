@@ -154,7 +154,6 @@ body {
 
 
 
-
 .modal-compra {
   background-color: rgba(15, 15, 15, 0.342);
   width: 100vw;
@@ -474,7 +473,7 @@ body {
 }
 
 .vista-productos {
-  width: 920px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
