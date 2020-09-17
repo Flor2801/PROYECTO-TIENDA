@@ -499,7 +499,7 @@ body {
   align-items: center;
   padding: 30px 30px 50px 30px;
   border-radius: 3px;
-  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, transform 0.3s ease-out; 
 }
 
 .tarjeta img{
