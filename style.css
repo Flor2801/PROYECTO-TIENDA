@@ -499,6 +499,23 @@ body {
   align-items: center;
   padding: 30px 30px 50px 30px;
   border-radius: 3px;
+  transition: all 0.4s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 9px 1px #aeb0b2;
+}
+
+.tarjeta:hover .comprar {
+  background-color: rgb(250, 228, 28);
+  font-weight: 900;
+  font-size: 13px;
+  color: rgb(53, 53, 53);
+}
+
+.tarjeta:hover img {
+  transform: scale(1.10);
 }
 
 .hidden {
@@ -569,23 +586,17 @@ body {
   font-size: 13px;
   font-weight: 400;
   align-self: stretch;
-  width: 250px;
-  height: 50px;
-  /*
-  padding: 20px;
-  */
+  padding: 18px;
   text-align: center;
   margin-top: 10px;
-  transition: all 1s ease;
-  border:none;
+  transition: all 0.2s;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
 }
 
 .comprar > p {
   margin: 0px;
-}
-
-.comprar :hover {
-  background-color: yellow;
 }
 
 #cam {
