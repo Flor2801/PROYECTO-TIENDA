@@ -7,9 +7,6 @@ body {
   margin: 0px;
 }
 
-
-
-
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -17,8 +14,6 @@ body {
   padding: 10px 20px 10px 20px;
   background-color: #f1f1f1;
 }
-
-
 
 .home {
   height: 300px;
@@ -38,7 +33,6 @@ body {
   color: white;
   position: relative;
   transform: translateX(200%);
-
 }
 
 #fondo {
@@ -48,24 +42,25 @@ body {
   top: -110px;
   left: 0;
   z-index: -3;
-  
 }
 
 .degradado {
   height: 300px;
   width: 100vw;
-  background: linear-gradient(to right top, #05193799, #004d7a99, #00879399, #a900bf99, #eb12d999);
+  background: linear-gradient(
+    to right top,
+    #05193799,
+    #004d7a99,
+    #00879399,
+    #a900bf99,
+    #eb12d999
+  );
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   opacity: 0.3;
   z-index: -2;
-
 }
-
-
-
-
 
 .logo {
   display: flex;
@@ -98,10 +93,6 @@ body {
   font-size: 15px;
   font-weight: 300;
 }
-
-
-
-
 
 .overlay {
   width: 100vw;
@@ -146,13 +137,9 @@ body {
   top: 20px;
 }
 
-
-
 .no-scroll {
   overflow: hidden;
 }
-
-
 
 .modal-compra {
   background-color: rgba(15, 15, 15, 0.342);
@@ -191,19 +178,16 @@ body {
 
 .nombre-y-mail {
   margin-top: 30px;
-
 }
 
 .nombre-y-mail label {
   margin-top: 10px;
 }
 
-
 .info-personal {
   width: 370px;
-  height: 50%;
+  height: 55%;
   border-bottom: 1px rgb(228, 227, 227) solid;
-  
 }
 .info-personal p {
   margin: 0px;
@@ -216,30 +200,28 @@ body {
 .info-personal label {
   font-size: 14px;
   font-weight: 300;
-  margin-top: 30px;
+  display: block;
 }
 
 .info-personal input {
   border: none;
   border-bottom: 1px grey solid;
   width: 80%;
-  
+  padding-top: 15px;
 }
 
 .info-personal ::placeholder {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-
 }
-
 
 .pago-y-envio {
   margin-top: 30px;
 }
 
 .opciones-pago {
-  height: 50%;
+  height: 45%;
   padding-top: 10px;
 }
 
@@ -253,6 +235,8 @@ body {
 .opciones-lista label {
   font-size: 14px;
   font-weight: 300;
+  display: block;
+  padding-top: 8px;
 }
 
 .resumen {
@@ -279,11 +263,11 @@ body {
   font-weight: 900;
 }
 
-.resumen-subtotal p{
+.resumen-subtotal p {
   margin: 12px;
 }
 
-.resumen-total p{
+.resumen-total p {
   margin: 12px;
 }
 
@@ -321,11 +305,7 @@ body {
 .botones p {
   margin: 0px;
   font-size: 12px;
-  
 }
-
-
-
 
 .principal {
   display: flex;
@@ -413,7 +393,6 @@ body {
   position: relative;
   top: -30px;
   left: 170px;
- 
 }
 
 .categoria {
@@ -473,7 +452,6 @@ body {
 }
 
 .vista-productos {
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -591,13 +569,23 @@ body {
   font-size: 13px;
   font-weight: 400;
   align-self: stretch;
+  width: 250px;
+  height: 50px;
+  /*
   padding: 20px;
+  */
   text-align: center;
   margin-top: 10px;
+  transition: all 1s ease;
+  border:none;
 }
 
 .comprar > p {
   margin: 0px;
+}
+
+.comprar :hover {
+  background-color: yellow;
 }
 
 #cam {

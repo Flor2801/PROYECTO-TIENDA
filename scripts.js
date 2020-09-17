@@ -2,7 +2,9 @@ const filtroRating = document.getElementsByClassName("review");
 const filtroNombre = document.getElementById("search");
 const tarjetas = document.getElementsByClassName("tarjeta");
 const filtroCategoria = document.getElementsByClassName("tipo");
-const limpiar = document.getElementById("limpieza");
+const campoTexto = document.getElementById("search");
+const limpiar = document.getElementById("limpieza")
+
 
 ///////////////// BUSQUEDA CON FILTRO DE TEXTO /////////////////////////////
 
@@ -71,7 +73,7 @@ for (let checkbox of filtroRating) {
 
 
 //////////////////////////   LIMPIAR   /////////////////////////////////
-/*
+
 limpiar.onclick = () => {
 
 for (let punto of filtroRating) {
@@ -88,12 +90,10 @@ for (let tipo of filtroCategoria) {
         } 
 }
 
-campoTexto.value = "  ";
-
-
+campoTexto.value = "";
 
 }
-*/
+
 
 //////////////////////////  ABRIR CARRITO   ////////////////////////////////
 
