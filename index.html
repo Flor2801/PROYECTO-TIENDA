@@ -7,50 +7,47 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="ICONOS/8572icons8-multiple-devices-48.ico" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
-
-
     <title>ADA SHOP</title>
 </head>
+
 
 <body>
 
     <header class="nav-bar">
 
         <div class="logo">
-            <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset=""> </div>
+            <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset="""> </div>
 
             <div>
-                <p> ADA SHOP </p>
+                <h1> ADA SHOP </h1>
             </div>
 
         </div>
 
 
 
-        <div class="carrito">
-            <div id="crt"> <i class="fas fa-shopping-cart"></i> </div>
-            <div>
-                <p id="abrir-carrito"> Carrito (0 Items)</p>
+        <div class=" carrito">
+                <div id="crt"> <i class="fas fa-shopping-cart"></i> </div>
+                <div>
+                    <p id="abrir-carrito">Carrito (0 Items)</p>
+                </div>
             </div>
-
-        </div>
 
     </header>
 
-
+    <!-- ---------------------------- MODAL CARRITO DE COMPRA ---------------------------- -->
 
     <aside>
         <div class="overlay hidden" id="overlay">
             <div class="menu-compra" id="menu-compra">
                 <p>Carrito</p>
-                <p id="descripcion-carrito">No tienes productos en el carrito, <br> ¡agrega algunos!</p>
+                <p id="descripcion-carrito"> No tienes productos en el carrito, <br> ¡agrega algunos!</p>
                 <i id="cerrar" class="far fa-times-circle"></i>
             </div>
         </div>
     </aside>
 
-
+    <!-- ---------------------------- MODAL CHECKOUT DE COMPRA ---------------------------- -->
 
     <aside>
         <div class="modal-compra">
@@ -60,6 +57,7 @@
                 <div class="contenedor-datospersonales-y-pago">
 
                     <div class="datos-personales-y-pago">
+                        <h2>Checkout</h2>
                         <div class="info-personal">
                             <p>Datos Personales</p>
                             <form class="nombre-y-mail">
@@ -70,23 +68,27 @@
                             </form>
                         </div>
                         <div class="opciones-pago">
-                            <p>Opciones de pago</p>
+                            
 
                             <div class="opciones-lista">
-                                <form class="pago-y-envio">
-                                    <label><input type="radio" checked> Efectivo </input><br></label>
-                                    <label><input type="radio"> Tarjeta de credito </input><br> </label>
+                                <p>Opciones de pago</p>
+                            <form class="pago-y-envio">
+                                    <label><input type="radio" name="forma de pago" checked> Efectivo </input><br></label>
+                                    <label><input type="radio" name="forma de pago" > Tarjeta de credito </input><br> </label>
                                     <label><input type="checkbox"> Necesito envio </input><br> </label>
                                     <label><input type="checkbox"> Tengo tarjeta de descuento </input><br>
-                                        <label></label>
-
-
-                                </form>
-
+                            </form>
                             </div>
 
+                            <div class="ref-opciones">
+                                <ul>
+                                    <li>+10% Recargo</li>
+                                    <li>+ $50 Recargo</li>
+                                    <li>- 10% Descuento</li>
+                                
+                                </ul>
+                            </div>
                         </div>
-
                     </div>
 
 
@@ -96,23 +98,19 @@
                         <div class="resumen-titulo">
                             <p>Resumen</p>
                         </div>
-
                         <div class="resumen-subtotal">
-                            <p>Subtotal</p>
+                            <p>Subtotal:</p>
                         </div>
-
                         <div class="resumen-total">
-                            <p>Total:</p>
+                            <p>Total: </p>
                         </div>
-
-
                     </div>
 
 
-                    <!-- Fin de div "Contenedor datos y resumen-->
+
                 </div>
 
-                <div class="botones">
+                <div class="botones-checkout">
 
                     <button class="seguir">
                         <p>SEGUIR COMPRANDO</p>
@@ -128,15 +126,20 @@
         </div>
     </aside>
 
+    <!-- ---------------------------- PORTADA PRINCIPAL CATEGORIA ---------------------------- -->
 
 
     <section class="home">
-        <div class="titulo"> <p>ELECTRÓNICA</p> </div>
+        <div class="titulo">
+            <p>ELECTRÓNICA</p>
+        </div>
         <div class="degradado"> </div>
         <div class="contenedor-fondo"> <img src="IMAGENES/fondo4.png" srcset="" id="fondo"> </div>
     </section>
 
 
+
+    <!-- ---------------------------- SECCION DE FILTROS DE BUSQUEDA ---------------------------- -->
 
     <section class="principal">
 
@@ -149,28 +152,25 @@
                 </div>
             </div>
 
- 
+
             <div class="busqueda">
                 <div class="titulo"> <label for="idbusqueda"> BUSQUEDA </div>
                 <div class="buscar">
                     <form id="input-busqueda">
-                        <input type="text" name="busqueda" id="search" placeholder="Buscar productos"/>
+                        <input type="text" name="busqueda" id="search" placeholder="Buscar productos" />
                         <div id="lupa"><i class="fas fa-search"></i>
                         </div>
                     </form>
 
                     </label>
                 </div>
-
             </div>
 
 
             <div class="categoria">
                 <div class="titulo">CATEGORIA</div>
 
-
                 <div class="contenedor-items">
-
                     <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="consolas">
                         <p>CONSOLAS</p>
                     </div>
@@ -186,16 +186,8 @@
                     <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="accesorios">
                         <p>ACCESORIOS</p>
                     </div>
-
-
-
-
                 </div>
-
-
             </div>
-
-
 
 
             <div class="puntaje">
@@ -258,22 +250,20 @@
                         </div>
                         <p>(1)</p>
                     </div>
-
                 </div>
-
             </div>
         </div>
 
         </div>
 
 
+        <!-- ---------------------------- SECCION VISTAS LISTA O GRILLA  ---------------------------- -->
 
 
-
-        <section class="shop">
+        <main class="shop">
             <div class="vista-productos">
                 <div>
-                    <p> Mostrando 12 productos de 12 </p>
+                    <p> Mostrando 12 productos de 12</p>
                 </div>
                 <div class="menu-vistas">
                     <div>
@@ -286,11 +276,15 @@
                 </div>
             </div>
 
-            
+
+            <!-- ---------------------------- SECCION PRINCIPAL DE PRODUCTOS ---------------------------- -->
+
+
             <div class="catalogo">
                 <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="22000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung">
+                    </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Celular Samsung</p>
@@ -309,14 +303,14 @@
                         </div>
 
                     </div>
-                     <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="play station sony" data-categoria="consolas" data-precio="30000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/play.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/play.jpg" alt="Play Station"> </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Play Station Sony</p>
@@ -335,14 +329,15 @@
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="celular nokia" data-categoria="celulares" data-precio="32500"
                     data-rating="5">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg" alt="Celular Nokia">
+                    </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Celular Nokia</p>
@@ -356,19 +351,20 @@
                                 <div><i class="fas fa-star"></i></div>
                                 <div><i class="fas fa-star"></i></div>
                                 <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
                             </div>
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="56000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg" alt="Celular Samsung">
+                    </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Celular Samsung</p>
@@ -381,20 +377,21 @@
                                 <div><i class="fas fa-star"></i></div>
                                 <div><i class="fas fa-star"></i></div>
                                 <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
                                 <div><i class="far fa-star"></i></div>
                             </div>
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="iphone" data-categoria="celulares" data-precio="97000"
                     data-rating="3">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"
+                            alt="Celular Apple modelo Iphone"> </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Iphone X Apple</p>
@@ -413,14 +410,20 @@
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
+
+               
+        
+
+
 
                 <div class="tarjeta" data-nombre="camara canon" data-categoria="camaras" data-precio="153000"
                     data-rating="5">
-                    <div class="foto-producto"> <img class="img-prd" id="cam" src="IMAGENES/camara.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" id="cam" src="IMAGENES/camara.jpg" alt="Camara Canon">
+                    </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Camara Reflex Canon</p>
@@ -439,14 +442,16 @@
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
+
 
                 <div class="tarjeta" data-nombre="celular xiaomi" data-categoria="celulares" data-precio="22000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/samsung1.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/samsung1.jpg" alt="Celular Xiaomi">
+                    </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Celular Xiaomi</p>
@@ -465,14 +470,15 @@
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="mac book air" data-categoria="notebooks" data-precio="129000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" id="mac" src="IMAGENES/mac.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" id="mac" src="IMAGENES/mac.jpg"
+                            alt="Notebook Apple Modelo MacBookAir"> </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>MacBook Air Apple</p>
@@ -491,14 +497,15 @@
                         </div>
 
                     </div>
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
+                    </button>
                 </div>
 
                 <div class="tarjeta" data-nombre="headphones sony" data-categoria="accesorios" data-precio="19000"
                     data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/headphones.jpg"> </div>
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/headphones.jpg"
+                            alt="Headphones Sony"> </div>
                     <div class="desc-producto">
                         <div class="title">
                             <p>Headphones Sony</p>
@@ -515,33 +522,53 @@
                                 <div><i class="far fa-star"></i></div>
                             </div>
                         </div>
-
                     </div>
-
-                   <button class="comprar">
+                    <button class="comprar">
                         <p>COMPRAR</p>
-                     </button>
-
+                    </button>
                 </div>
 
             </div>
 
-        </section>
-
+        </main>
 
     </section>
 
 
-    <footer>
+    <!-- ---------------------------- MODAL CONFIRMACION PRODUCTO AGREGADO ---------------------------- -->
 
+
+
+
+
+
+
+    <!-- ---------------------------- MODAL CONFIRMACION ELIMINAR PRODUCTO ---------------------------- -->
+
+
+
+
+
+
+
+    <!-- ---------------------------- MODAL CONFIRMACION VACIAR CARRITO ---------------------------- -->
+
+
+
+
+
+
+
+
+    <!-- ---------------------------- SECCION PIE DE PAGINA ---------------------------- -->
+
+    <footer>
         <div class="foot">
             <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset=""></div>
             <div>
                 <p> ADA SHOP - Gracias por visitarnos </p>
             </div>
             <div class="Heart"> <i class="fas fa-heart"></i></div>
-
-
         </div>
     </footer>
 
