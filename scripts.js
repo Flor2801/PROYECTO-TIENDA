@@ -7,7 +7,8 @@ const limpiar = document.getElementById("limpieza");
 console.log(tarjetas)
 
 
- 
+//////////////////  FUNCIONES DE FILTRO  ///////////////////////////////
+
 ////////////////// FUNCIONES SEGUN TIPO DE BUSQUEDA  ///////////////////
 
 
@@ -30,8 +31,6 @@ for (let punto of filtroRating) {
 }
 
 /////////////////////////////////////////////////////////////////////
-
-
 
 
 const filtrarTarjetas = () => {
@@ -234,6 +233,41 @@ botonFinalizar.onclick = () => {
   modalCheckout.classList.add('hidden');
 }
 
+
+//////////////////////////////  vistas  GRILLA Y LISTA  //////////////////////////
+
+const vistaGrilla = document.getElementById("vista-grilla")
+const vistaLista = document.getElementById("vista-lista")
+const grilla = document.getElementById("catalogo-grilla")
+const lista = document.getElementById("catalogo-lista")
+
+console.log(vistaGrilla)
+console.log(vistaLista)
+console.log(catalogo)
+console.log(catalogoLista)
+
+
+vistaGrilla.onclick = () => {
+  grilla.classList.remove('hidden');
+  lista.classList.add('hidden');
+}
+
+
+vistaLista.onclick = () => {
+  grilla.classList.add('hidden');
+  lista.classList.remove('hidden');
+}
+
+
+
+
+
+
+
+
+
+
+////////////////////////  FUNCIONES DE FILTRO  ///////////////////////////////
 
 
 

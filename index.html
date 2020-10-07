@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="nav-bar">
+    <header class="nav-bar" aria-hidden="true" aria-label="Bienvenide a ADA Shop">
 
         <div class="logo">
             <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset="""> </div>
@@ -26,10 +26,10 @@
 
 
 
-        <div class=" carrito">
-                <div id="crt"> <i class="fas fa-shopping-cart"></i> </div>
+        <div class=" carrito" aria-label="Carrito de compras">
+                <div id="crt"> <i class="fas fa-shopping-cart" aria-hidden="true"></i> </div>
                 <div>
-                    <p id="abrir-carrito">Carrito (0 Items)</p>
+                    <p id="abrir-carrito" role="button">Carrito (0 Items)</p>
                 </div>
             </div>
 
@@ -68,16 +68,18 @@
                             </form>
                         </div>
                         <div class="opciones-pago">
-                            
+
 
                             <div class="opciones-lista">
                                 <p>Opciones de pago</p>
-                            <form class="pago-y-envio">
-                                    <label><input type="radio" name="forma de pago" checked> Efectivo </input><br></label>
-                                    <label><input type="radio" name="forma de pago" > Tarjeta de credito </input><br> </label>
+                                <form class="pago-y-envio">
+                                    <label><input type="radio" name="forma de pago" checked> Efectivo
+                                        </input><br></label>
+                                    <label><input type="radio" name="forma de pago"> Tarjeta de credito </input><br>
+                                    </label>
                                     <label><input type="checkbox"> Necesito envio </input><br> </label>
                                     <label><input type="checkbox"> Tengo tarjeta de descuento </input><br>
-                            </form>
+                                </form>
                             </div>
 
                             <div class="ref-opciones">
@@ -85,7 +87,7 @@
                                     <li>+10% Recargo</li>
                                     <li>+ $50 Recargo</li>
                                     <li>- 10% Descuento</li>
-                                
+
                                 </ul>
                             </div>
                         </div>
@@ -129,7 +131,7 @@
     <!-- ---------------------------- PORTADA PRINCIPAL CATEGORIA ---------------------------- -->
 
 
-    <section class="home">
+    <section class="home" aria-label="Seccion de productos de electrónica">
         <div class="titulo">
             <p>ELECTRÓNICA</p>
         </div>
@@ -141,14 +143,14 @@
 
     <!-- ---------------------------- SECCION DE FILTROS DE BUSQUEDA ---------------------------- -->
 
-    <section class="principal">
+    <section class="principal" aria-label="Catalogo de productos">
 
         <div class="menu">
             <div class="filtro">
                 <div id="f"> FILTROS </div>
                 <div id="l">
                     <div> <i class="fas fa-trash-alt"></i></div>
-                    <div><button id='limpieza'>Limpiar</button></div>
+                    <div> <button id='limpieza'>Limpiar</button></div>
                 </div>
             </div>
 
@@ -257,8 +259,8 @@
         </div>
 
 
-        <!-- ---------------------------- SECCION VISTAS LISTA O GRILLA  ---------------------------- -->
 
+        <!-- -------------------------------- VISTA LISTA DE PRODUCTOS ------------------------------------- -->
 
         <main class="shop">
             <div class="vista-productos">
@@ -270,17 +272,19 @@
                         <p> Ver como </p>
                     </div>
                     <div>
-                        <i class="fas fa-th"></i> </div>
+                        <i class="fas fa-th" id="vista-grilla"></i> </div>
                     <div>
-                        <i class="fas fa-th-list"></i></div>
+                        <i class="fas fa-th-list" id="vista-lista"></i></div>
                 </div>
             </div>
 
 
             <!-- ---------------------------- SECCION PRINCIPAL DE PRODUCTOS ---------------------------- -->
+            <!-- ---------------------------- SECCION VISTAS LISTA O GRILLA  ---------------------------- -->
 
+            <!--
 
-            <div class="catalogo">
+            <div class="catalogo" id="catalogo-grilla">
                 <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="22000"
                     data-rating="4">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung">
@@ -531,6 +535,357 @@
             </div>
 
         </main>
+
+    </section>
+
+-->
+
+            <!-- -------------------------------- VISTA LISTA DE PRODUCTOS ------------------------------------- -->
+
+            <div class="catalogo-lista" id="catalogo-lista">
+                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="22000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung">
+                    </div>
+
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Celular Samsung</p>
+                        </div>
+                        <div class="precio">
+                            <p>$22.000</p>
+                        </div>
+
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta" data-nombre="play station sony" data-categoria="consolas" data-precio="30000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" id="play" src="IMAGENES/play.jpg" alt="Play Station"> </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Play Station Sony</p>
+                        </div>
+                        <div class="precio">
+                            <p>$30.000</p>
+                        </div>
+
+
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tarjeta" data-nombre="celular nokia" data-categoria="celulares" data-precio="32500"
+                    data-rating="5">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg" alt="Celular Nokia">
+                    </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Celular Nokia</p>
+                        </div>
+                        <div class="precio">
+                            <p>$53.000</p>
+                        </div>
+
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="56000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg" alt="Celular Samsung">
+                    </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Celular Samsung</p>
+                        </div>
+                        <div class="precio">
+                            <p>$56.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tarjeta" data-nombre="iphone" data-categoria="celulares" data-precio="97000"
+                    data-rating="3">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"
+                            alt="Celular Apple modelo Iphone"> </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Iphone X Apple</p>
+                        </div>
+                        <div class="precio">
+                            <p>$97.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <div class="tarjeta" data-nombre="camara canon" data-categoria="camaras" data-precio="153000"
+                    data-rating="5">
+                    <div class="foto-producto"> <img class="img-prd" id="cam" src="IMAGENES/camara.jpg"
+                            alt="Camara Canon">
+                    </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Camara Reflex Canon</p>
+                        </div>
+                        <div class="precio">
+                            <p>$153.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tarjeta" data-nombre="celular xiaomi" data-categoria="celulares" data-precio="22000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/samsung1.jpg" alt="Celular Xiaomi">
+                    </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Celular Xiaomi</p>
+                        </div>
+                        <div class="precio">
+                            <p>$22.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tarjeta" data-nombre="mac book air" data-categoria="notebooks" data-precio="129000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" id="mac" src="IMAGENES/mac.jpg"
+                            alt="Notebook Apple Modelo MacBookAir"> </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>MacBook Air Apple</p>
+                        </div>
+                        <div class="precio">
+                            <p>$129.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tarjeta" data-nombre="headphones sony" data-categoria="accesorios" data-precio="19000"
+                    data-rating="4">
+                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/headphones.jpg"
+                            alt="Headphones Sony"> </div>
+                    <div class="desc-producto">
+                        <div class="title">
+                            <p>Headphones Sony</p>
+                        </div>
+                        <div class="precio">
+                            <p>$19.000</p>
+                        </div>
+                        <div class="descripcion">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
+                        <div class="calificacion">
+                            <div class="stars">
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="fas fa-star"></i></div>
+                                <div><i class="far fa-star"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="comprar">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+
+
+
+        </main>
+
+    </section>
+
+    </main>
 
     </section>
 
