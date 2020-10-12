@@ -8,10 +8,12 @@ const limpiar = document.getElementById("limpieza");
 
 //////////////////////////////  vistas  GRILLA Y LISTA  //////////////////////////
 
-
+// ICONOS
 const vistaGrilla = document.getElementById("vista-grilla")
 const vistaLista = document.getElementById("vista-lista")
+// LISTAS DE PRODUCTOS
 const grilla = document.getElementById("catalogo-grilla")
+// TARJETAS DE PRODUCTOS
 const descripciones = document.getElementsByClassName("texto-descriptivo")
 const detalle = document.getElementById("desc-producto")
 
@@ -20,19 +22,12 @@ const detalle = document.getElementById("desc-producto")
 vistaGrilla.onclick = () => {
   grilla.classList.remove("catalogo-lista");
   detalle.classList.remove("detalles-lista");
-
-  for (textos of descripciones) {
-    textos.classList.add("hidden");
-  }
 }
 
 vistaLista.onclick = () => {
   grilla.classList.add("catalogo-lista");
   detalle.classList.add("detalles-lista");
 
-  for (textos of descripciones) {
-    textos.classList.remove("hidden");
-  }
 }
 
 
@@ -371,6 +366,7 @@ const agregaSamsung2 = document.getElementById("compra-samsung2")
 
 ///////////////////////  COMPRAR Y ABRIR MODAL CHECKOUT O ABRIR MODAL VACIAR  ////////////////////////////////
 
+
 const comprar = document.getElementById("carrito-comprar")
 const checkout = document.getElementById("modal-checkout")
 const vaciar = document.getElementById("carrito-vaciar")
@@ -419,24 +415,32 @@ botonVaciarModal.onclick = () => {
   overlayVaciar.classList.add("hidden")
 }
 
-/*
+
+
+
+
+
+
+
+
+
+
+//////////////////////   SELECCION CANTIDAD DE PRODUCTOS  /////////////////////////
+
+const selectorSamsung1 = document.getElementById("input-1")
+const precioSamsung1 = document.getElementById("unid-finales")
+const subtotalCarrito = document.getElementById("subCarrito")
+
+
+selectorSamsung1.onclick = () => {
+precioFinal1 = precioSamsung1.value*22500
+actualizarSubtotal()
+}
 
 //////////////////////   SUBTOTAL CARRITO   /////////////////////////
 
 actualizarSubtotal = () => {
-  subtotal.textContent = selectorCel.value*5000 + selectorPcs.value*30000
-   
-}
-
-//////////////////////   SELECCION CANTIDAD DE PRODUCTOS  /////////////////////////
-
-selectorCel.onclick = () => {
-  const precioCel = document.getElementById("precio-cel")
-  const subtotal = document.getElementById("subtotal")
-celularesTotales.textContent = selectorCel.value*5000
-subtotal.textContent = celularesTotales.textContent
-
-actualizarSubtotal()
+  subtotalCarrito.textContent = precioFinal1
 
 }
 
@@ -451,5 +455,5 @@ quitar.onclick = () => {
 }
 
 
-*/
+
 
