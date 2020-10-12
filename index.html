@@ -46,18 +46,18 @@
         <div class="overlay hidden" id="overlay">
             <div class="menu-compra">
                 <p>Carrito</p>
-                <div class="productos-agregados" id="menu-compra"></div>
-                <p class="leyenda hidden" id="descripcion-carrito"> No tienes productos en el carrito, <br> ¡agrega
+                <div class="productos-agregados hidden" id="menu-compra"></div>
+                <p class="leyenda" id="descripcion-carrito"> No tienes productos en el carrito, <br> ¡agrega
                     algunos!
                 </p>
                 <i id="cerrar" class="far fa-times-circle"></i>
 
-                <div class="carrito-footer">
+                <div class="carrito-footer hidden" id="carrito-footer">
                     <div class="subtotal-carrito">
                         <p>SUBTOTAL:</p>
                     </div>
                     <div class="botones-comprar-vaciar">
-                        <div><button id="carrito-comprar">COMPRAR</button  id="carrito-comprar"></div>
+                        <div><button id="carrito-comprar">COMPRAR</button id="carrito-comprar"></div>
                         <div><button id="carrito-vaciar">VACIAR</button id="carrito-vaciar"></div>
                     </div>
                 </div>
@@ -75,22 +75,27 @@
                     <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
-                        <div class="carr-title">
-                            <div class="carr-nombre">
+                        <div class="titulo-prod">
+                            
                                 <p>Celular Samsung</p>
-                            </div>
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung1"></i>
+                          
+                            <div>
+                                <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
                             </div>
                         </div>
+
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
-                                <p>Unidades</p>
+                            <div class="carr-input">
+                                <input type="number" id="value-pc" min=1 id="input-1">
+                                <p>unidades</p>
                             </div>
                             <div class="unid-finales">
-                                $ <span id="unid-finales-samsung">22.500</span>
+                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
 
 
@@ -294,7 +299,7 @@
     <!-- ---------------------------- MODAL CHECKOUT DE COMPRA ---------------------------- -->
 
     <aside>
-        <div class="modal-compra">
+        <div class="modal-compra hidden" id="modal-checkout">
 
             <div class="checkout">
 
@@ -358,10 +363,10 @@
 
                 <div class="botones-checkout">
 
-                    <button class="seguir">
+                    <button class="seguir fin" id="fin-1">
                         <p>SEGUIR COMPRANDO</p>
                     </button>
-                    <button class="finalizar">
+                    <button class="finalizar fin" id="fin-2">
                         <p>FINALIZAR</p>
                     </button>
 
@@ -376,22 +381,22 @@
 
 
     <aside>
-        <div class="overlay-vaciar"  id="overlay-vaciar">
-        <div class="modal-vaciar">
-            <p>Estas por vaciar el carrito, quieres continuar?</p>
+        <div class="overlay-vaciar hidden" id="overlay-vaciar">
+            <div class="modal-vaciar">
+                <p>Estas por vaciar el carrito, quieres continuar?</p>
 
-            <div class="botones-vaciar">
-                <button class="cancelar" id="boton-modal-cancelar">
-                    <p>CANCELAR</p>
-                </button>
-                <button class="vaciar" id="boton-modal-vaciar">
-                    <p>VACIAR</p>
-                </button>
+                <div class="botones-vaciar">
+                    <button class="cancelar" id="boton-modal-cancelar">
+                        <p>CANCELAR</p>
+                    </button>
+                    <button class="vaciar" id="boton-modal-vaciar">
+                        <p>VACIAR</p>
+                    </button>
+
+                </div>
 
             </div>
-
         </div>
-    </div>
     </aside>
     <!--   --------------------------------------------------------------------------       -->
 

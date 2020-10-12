@@ -238,10 +238,14 @@ carrito.onclick = () => {
   overlay.classList.add('no_scroll');
 };
 
-
 cerrar.onclick = () => {
   overlay.classList.add('hidden');
 };
+
+
+const vaciarCarrito = document.getElementById("carrito-vaciar")
+
+
 
 
 //////////////////////////  ABRIR FILTRO RESPONSIVE  ////////////////////////////////
@@ -293,17 +297,44 @@ for (let item of Items) {
 
 const carro = document.getElementById("menu-compra")
 const aviso = document.getElementById("descripcion-carrito")
+const carroVacio = document.getElementsByTagName("div").length
 
 const agregaSamsung1 = document.getElementById("compra-samsung-1")
 const itemSamsung1 = document.getElementById("ver-samsung-1")
 const quitar = document.getElementById("ico-samsung1")
 
+const footerCarrito = document.getElementById("carrito-footer")
+const eliminaSamsung1 = document.getElementById("prod-elimina")
+
+console.log()
+
+
+const carritoVacio = () => {
+  if (carroVacio = 0) {
+    aviso.classList.remove("hidden")
+    footerCarrito.classList.remove("hidden")
+    carro.classList.add("hidden")
+  }
+  
+}
+
+
 
 agregaSamsung1.onclick = () => {
+  carro.classList.remove("hidden")
   itemSamsung1.classList.remove("hidden")
   itemSamsung1.classList.add("selected") 
   aviso.classList.add("hidden")
+  footerCarrito.classList.remove("hidden")
   carro.appendChild(itemSamsung1)
+
+ 
+}
+
+eliminaSamsung1.onclick = () => {
+  itemSamsung1.classList.add("hidden")
+  itemSamsung1.classList.remove("selected") 
+  carritoVacio()
 }
 
 
@@ -338,14 +369,44 @@ const itemSamsung2 = document.getElementById("ver-samsung2")
 const agregaSamsung2 = document.getElementById("compra-samsung2")
 
 
+///////////////////////  COMPRAR Y ABRIR MODAL CHECKOUT O ABRIR MODAL VACIAR  ////////////////////////////////
+
+const comprar = document.getElementById("carrito-comprar")
+const checkout = document.getElementById("modal-checkout")
+const vaciar = document.getElementById("carrito-vaciar")
+const seguirCheckout = document.getElementById("fin-1")
+const finalizarCheckout = document.getElementById("fin-2")
 
 
+comprar.onclick = () => {
+  checkout.classList.remove("hidden")
+}
 
+vaciar.onclick = () => {
+  overlayVaciar.classList.remove("hidden")
+}
+
+seguirCheckout.onclick = () => {
+  checkout.classList.add("hidden")
+}
+
+finalizarCheckout.onclick = () => {
+  checkout.classList.add("hidden")
+}
+
+/*
+const finalizarproceso = () => {
+for (let final of finalizarCheckout) {
+  if (final.onclick) {
+    overlayVaciar.classList.add("hidden")
+  }
+}
+}
+*/
 
 ///////////////////////  MODAL VACIAR CARRTIO  ////////////////////////////////
 
 
-const vaciarCarrito = document.getElementById("carrito-vaciar")
 const overlayVaciar = document.getElementById("overlay-vaciar")
 const botonCancelarModal = document.getElementById("boton-modal-vaciar")
 const botonVaciarModal = document.getElementById("boton-modal-cancelar")
@@ -358,9 +419,6 @@ botonVaciarModal.onclick = () => {
   overlayVaciar.classList.add("hidden")
 }
 
-
-
-
 /*
 
 //////////////////////   SUBTOTAL CARRITO   /////////////////////////
@@ -369,8 +427,6 @@ actualizarSubtotal = () => {
   subtotal.textContent = selectorCel.value*5000 + selectorPcs.value*30000
    
 }
-
-
 
 //////////////////////   SELECCION CANTIDAD DE PRODUCTOS  /////////////////////////
 
@@ -383,8 +439,6 @@ subtotal.textContent = celularesTotales.textContent
 actualizarSubtotal()
 
 }
-
-
 
 //////////////////////   BOTON ELIMINAR DE LA TARJETA  /////////////////////////
 
