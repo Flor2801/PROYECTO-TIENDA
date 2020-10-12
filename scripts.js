@@ -4,12 +4,41 @@ const filtroNombre = document.getElementById("search");
 const tarjetas = document.getElementsByClassName("tarjeta");
 const limpiar = document.getElementById("limpieza");
 
-console.log(tarjetas)
 
 
-//////////////////  FUNCIONES DE FILTRO  ///////////////////////////////
+//////////////////////////////  vistas  GRILLA Y LISTA  //////////////////////////
 
-////////////////// FUNCIONES SEGUN TIPO DE BUSQUEDA  ///////////////////
+
+const vistaGrilla = document.getElementById("vista-grilla")
+const vistaLista = document.getElementById("vista-lista")
+const grilla = document.getElementById("catalogo-grilla")
+const descripciones = document.getElementsByClassName("texto-descriptivo")
+const detalle = document.getElementById("desc-producto")
+
+
+
+vistaGrilla.onclick = () => {
+  grilla.classList.remove("catalogo-lista");
+  detalle.classList.remove("detalles-lista");
+
+  for (textos of descripciones) {
+    textos.classList.add("hidden");
+  }
+}
+
+vistaLista.onclick = () => {
+  grilla.classList.add("catalogo-lista");
+  detalle.classList.add("detalles-lista");
+
+  for (textos of descripciones) {
+    textos.classList.remove("hidden");
+  }
+}
+
+
+/*************************************  FUNCIONES DE FILTRO  ***************************************/
+
+/* FUNCIONES SEGUN TIPO DE BUSQUEDA  */
 
 
 filtroNombre.oninput = () => {
@@ -206,13 +235,28 @@ const body = document.getElementsByTagName("body");
 
 carrito.onclick = () => {
   overlay.classList.remove('hidden');
-  overlay.classList.add('no-scroll');
+  overlay.classList.add('no_scroll');
 };
 
 
 cerrar.onclick = () => {
   overlay.classList.add('hidden');
 };
+
+
+//////////////////////////  ABRIR FILTRO RESPONSIVE  ////////////////////////////////
+
+
+const embudo = document.getElementById("ico-filtros-responsive");
+const filtroResponsive = document.getElementById("fil-responsive");
+
+console.log(embudo)
+console.log(filtroResponsive)
+
+embudo.onclick = () => { 
+  filtroResponsive.classList.remove('hidden');
+};
+
 
 //////////////////////////////// MODAL CHECKOUT ///////////////////////////
 
@@ -234,163 +278,124 @@ botonFinalizar.onclick = () => {
 }
 
 
-//////////////////////////////  vistas  GRILLA Y LISTA  //////////////////////////
+////////////////////////////////   AGRAGR PRODUCTOS AL CARRITO  //////////////////////////////////
 
-const vistaGrilla = document.getElementById("vista-grilla")
-const vistaLista = document.getElementById("vista-lista")
-const grilla = document.getElementById("catalogo-grilla")
-const lista = document.getElementById("catalogo-lista")
+/* TEST ALTERNATIVO
+comprar.onclick = () => {
 
-console.log(vistaGrilla)
-console.log(vistaLista)
-console.log(catalogo)
-console.log(catalogoLista)
-
-
-vistaGrilla.onclick = () => {
-  grilla.classList.remove('hidden');
-  lista.classList.add('hidden');
-}
-
-
-vistaLista.onclick = () => {
-  grilla.classList.add('hidden');
-  lista.classList.remove('hidden');
-}
-
-
-
-
-
-
-
-
-
-
-////////////////////////  FUNCIONES DE FILTRO  ///////////////////////////////
-
-
-
-
-
-////////////////// /////////////  /////////////////////  //////////////////
-///////////////// BUSQUEDA CON FILTRO DE TEXTO /////////////////////////////
-/*
-
-filtroNombre.oninput = () => {
-
-  for (let card of tarjetas) {
-    const input = filtroNombre.value.toLowerCase();
-    const nombre = card.dataset.nombre;
-
-    if (nombre.includes(input)) {
-      card.classList.remove("hidden");
-    } else {
-      card.classList.add("hidden");
-    }
+for (let item of Items) {
+  if (comprar.datanombre.nombre === item.dataset.nombre) {
+    item.classList.remove("hidden")
   }
-};
-
-///////////////// BUSQUEDA POR CATEGORIAS /////////////////////////////
-
-
-for (let checkbox of filtroCategoria) {
-  checkbox.onclick = () => {
-    for (let tarjeta of tarjetas) {
-      if (checkbox.checked) {
-        const tipo = tarjeta.dataset.categoria;
-
-        if (checkbox.value === tipo) {
-          tarjeta.classList.remove("hidden");
-        } else {
-          tarjeta.classList.add("hidden");
-        }
-      } else {
-        tarjeta.classList.remove("hidden");
-      }
-    }
-  };
 }
-
-
-////////////////////////// BUSQUEDA POR PUNTAJE  ///////////////////////////////
-
-
-
-for (let checkbox of filtroRating) {
-  // si hacen clic en algun checkbox
-
-checkbox.onclick = () => {
-    //recorro una a una las tarjetas
-    for (let tarjeta of tarjetas) {
-      tarjeta.classList.add("hidden"); 
-
-      if (checkbox.checked) {
-
-      for (let tarj2 of tarjetas) {
-        if (tarj2.checked) {
-          if (tarj2.value === tarjeta.dataset.rating) {
-            tarjeta.classList.remove("hidden");
-          } else if (tarj2.value==="") {
-            tarjeta.classList.remove("hidden");
-          }
-    }
- }
-
-}
-
-}
-
-if (checkbox.checked) {
-  const rating = tarjeta.dataset.rating;
-
-// veo si el rating es igual al checkbox
-  if (checkbox.value === rating) {
-    tarjeta.classList.remove("hidden");
-  } else {
-    tarjeta.classList.add("hidden");
-  }
-
-//si el checkbox no esta seleccionado
-} else {
-  tarjeta.classList.remove("hidden");
-}
-}
-
-// se cierra for (let tarjeta of tarjetas)
-};
-// se cierra checkbox.onclic
-}
-
-
-
-/*
-
-for (let checkbox of filtroRating) {
-  // si hacen clic en algun checkbox
-
-checkbox.onclick = () => {
-    //recorro una a una las tarjetas
-    for (let tarjeta of tarjetas) {
-      // si el chackbox esta seleccionado
-      if (checkbox.checked) {
-        const rating = tarjeta.dataset.rating;
-
-        // veo si el rating es igual al checkbox
-        if (checkbox.value === rating) {
-          tarjeta.classList.remove("hidden");
-        } else {
-          tarjeta.classList.add("hidden");
-        }
-
-        //si el checkbox no esta seleccionado
-      } else {
-        tarjeta.classList.remove("hidden");
-      }
-    }
-
-    // se cierra for (let tarjeta of tarjetas)
-  };
-  // se cierra checkbox.onclic
 }
 */
+
+const carro = document.getElementById("menu-compra")
+const aviso = document.getElementById("descripcion-carrito")
+
+const agregaSamsung1 = document.getElementById("compra-samsung-1")
+const itemSamsung1 = document.getElementById("ver-samsung-1")
+const quitar = document.getElementById("ico-samsung1")
+
+
+agregaSamsung1.onclick = () => {
+  itemSamsung1.classList.remove("hidden")
+  itemSamsung1.classList.add("selected") 
+  aviso.classList.add("hidden")
+  carro.appendChild(itemSamsung1)
+}
+
+
+
+const itemPlay = document.getElementById("ver-item-play")
+const agregaPlay = document.getElementById("compra-play")
+
+
+agregaPlay.onclick = () => {
+  itemPlay.classList.remove("hidden")
+  itemPlay.classList.add("selected") 
+  aviso.classList.add("hidden")
+  carro.appendChild(itemPlay)
+}
+
+
+
+const itemNokia = document.getElementById("ver-item-nokia")
+const agregaNokia = document.getElementById("compra-nokia")
+
+
+agregaNokia.onclick = () => {
+  itemNokia.classList.remove("hidden")
+  itemNokia.classList.add("selected") 
+  aviso.classList.add("hidden")
+  carro.appendChild(itemNokia)
+}
+
+
+
+const itemSamsung2 = document.getElementById("ver-samsung2")
+const agregaSamsung2 = document.getElementById("compra-samsung2")
+
+
+
+
+
+
+///////////////////////  MODAL VACIAR CARRTIO  ////////////////////////////////
+
+
+const vaciarCarrito = document.getElementById("carrito-vaciar")
+const overlayVaciar = document.getElementById("overlay-vaciar")
+const botonCancelarModal = document.getElementById("boton-modal-vaciar")
+const botonVaciarModal = document.getElementById("boton-modal-cancelar")
+
+botonCancelarModal.onclick = () => {
+  overlayVaciar.classList.add("hidden")
+}
+
+botonVaciarModal.onclick = () => {
+  overlayVaciar.classList.add("hidden")
+}
+
+
+
+
+/*
+
+//////////////////////   SUBTOTAL CARRITO   /////////////////////////
+
+actualizarSubtotal = () => {
+  subtotal.textContent = selectorCel.value*5000 + selectorPcs.value*30000
+   
+}
+
+
+
+//////////////////////   SELECCION CANTIDAD DE PRODUCTOS  /////////////////////////
+
+selectorCel.onclick = () => {
+  const precioCel = document.getElementById("precio-cel")
+  const subtotal = document.getElementById("subtotal")
+celularesTotales.textContent = selectorCel.value*5000
+subtotal.textContent = celularesTotales.textContent
+
+actualizarSubtotal()
+
+}
+
+
+
+//////////////////////   BOTON ELIMINAR DE LA TARJETA  /////////////////////////
+
+
+quitar.onclick = () => {
+  itemSamsung2.classList.add("hidden")
+  itemSamsung2.classList.remove("selected") 
+  celularesTotales.textContent = 0
+  selectorCel.value = 0
+}
+
+
+*/
+

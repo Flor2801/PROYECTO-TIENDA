@@ -26,10 +26,10 @@ body {
   position: relative;
 }
 
-.home p {
-  font-size: 32px;
+.home h1 {
+  font-size: 35px;
   font-weight: 800;
-  right: 500px;
+  right: 550px;
   color: white;
   position: relative;
   transform: translateX(200%);
@@ -72,7 +72,7 @@ body {
   margin-left: 10px;
 }
 
-.logo h1 {
+.logo p {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -98,6 +98,7 @@ body {
 .carrito p {
   font-size: 15px;
   font-weight: 300;
+
 }
 
 .overlay {
@@ -134,7 +135,75 @@ body {
   font-size: 25px;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
+  margin-bottom: 40px;
 }
+
+.productos-agregados {
+  height: 50%;
+  overflow-y: scroll;
+  width: 95%;
+}
+
+.carrito-footer {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal-carrito > p {
+  margin-bottom: 35px;
+}
+
+.carrito-footer > .botones-comprar-vaciar {
+ margin-bottom: 25px;
+ margin-top:0px;
+}
+
+.carrito-footer button {
+  margin: 5px 20px 5px 20px;
+  border: none;
+  width: 340px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.carrito-footer p {
+  font-size: 20px;
+}
+
+#carrito-comprar #carrito-vaciar {
+  margin: 0px;
+  font-size: 12px;
+}
+
+#carrito-comprar {
+background-color: #43a047;
+color: white;
+}
+
+#carrito-vaciar {
+  color: red;
+  border: solid red 1px;
+  background-color: white;
+  
+}
+
+#carrito-comprar:hover {
+  background-color: #39eb41;
+  border: none;
+  transition: 0.2s;
+}
+
+#carrito-vaciar:hover {
+  color: white;
+  background-color: red;
+  transition: 0.2s;
+}
+
 
 .menu-compra > #descripcion-carrito {
   font-size: 18px;
@@ -149,9 +218,90 @@ body {
   top: 20px;
 }
 
-.no-scroll {
-  overflow-y: hidden;
+
+.modal-vaciar {
+  width: 550px;
+  height: 330px;
+  background-color: white;
+  position: absolute;
+  top: 180px;
+  left: 380px;
+  margin: auto;
+  z-index: 5;
+  border-radius: 3px;
 }
+
+.overlay-vaciar {
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(141, 128, 128, 0.37);
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  transition: all 5s;
+
+}
+
+.modal-vaciar > p {
+  margin: 50px 50px 0px 50px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.botones-vaciar {
+  margin: 80px 20px 0px 60px;
+}
+
+.botones-vaciar > button {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 5px;
+}
+
+.botones-vaciar > .cancelar {
+  border: solid grey 2px;
+  background-color: white;
+  color: grey;
+}
+
+.botones-vaciar > .vaciar {
+  color: white;
+  border: solid red 1px;
+  background-color: rgb(190, 0, 0);
+ 
+ 
+}
+
+.botones-vaciar p {
+  margin: 0px;
+  font-size: 15px;
+}
+
+
+.cancelar:hover {
+  background-color: #e2e5e2;
+  border: none;
+  transition: 0.1s;
+}
+
+.vaciar:hover {
+  color: white;
+  background-color: red;
+  transition: 0.1s;
+ 
+}
+
+
+
+
+
+
+
 
 .modal-compra {
   background-color: rgba(15, 15, 15, 0.342);
@@ -234,7 +384,6 @@ body {
 
 .opciones-pago p {
   margin: 30px 0px 30px 0px;
-
   font-weight: 700;
   font-size: 18px;
 }
@@ -333,6 +482,7 @@ body {
 .finalizar:hover {
   background-color: #3bca42;
   border: none;
+  
 }
 
 .seguir:hover {
@@ -514,6 +664,99 @@ body {
 #list {
   width: 20px;
 }
+/*******************************************************************************************/
+
+
+.item {
+  width: 340px;
+  height: 130px;
+  margin: 10px 10px 5px 10px;
+  display: flex;
+  font-size: 10px;
+  font-weight: 200;
+}
+
+.item p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.carr-img {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.carr-desc {
+  background-color: yellowgreen ;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.carr-title {
+  background-color: grey ;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.carr-nombre > p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+
+}
+.carr-unidades {
+  background-color: white;
+  height: 70%;
+  display: flex;
+  background-color: blue ;
+}
+
+.carr-input {
+  margin: 0px;
+  background-color: rgb(154, 155, 153);
+  width: 60%;
+}
+
+.carr-input input {
+  width: 50px;
+  height: 30px;
+  padding: 0px;
+  margin: 10px 0px 0px 10px;
+}
+
+.carr-input p {
+  margin: 0px;
+  padding: 0px;
+}
+
+#carr-input {
+  width: 10px;
+}
+
+.unid-finales {
+  background-color: rgb(180, 180, 180);
+  width: 40%;
+}
+
+#unid-finales-samsung {
+  margin: 10px 0px 0px 10px;
+}
+
+
+.carr-img > img-prd {
+  width: 100%;
+  height: auto;
+}
+
+/*********************************** MODAL VACIAR CARRITO *********************************/
+
+
 
 /*---------------------------------- CATALOGO VISTA GRILLA  ------------------------------*/
 
@@ -592,6 +835,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   text-align: center;
+  max-width: 180px;
 }
 .precio > p {
   margin: 0px;
@@ -623,6 +867,7 @@ body {
   background-color: rgb(243, 243, 243);
   font-size: 13px;
   font-weight: 400;
+  width: 180px;
   align-self: stretch;
   padding: 18px;
   text-align: center;
@@ -645,7 +890,7 @@ body {
   height: 70%;
 }
 
-/*-- ------------------------ VISTA LISTA  estilos --------------------------- */
+/*-------------------------- VISTA LISTA estilos --------------------------- */
 
 .catalogo-lista {
   display: flex;
@@ -660,17 +905,18 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding: 25px 40px 25px 40px;
   border-radius: 3px;
   transition: box-shadow 0.1s, transform 0.3s ease-out;
 }
 
-.catalogo-lista .desc-producto {
+.detalles-lista {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 65%;
 }
 
 .catalogo-lista .descripcion p {
@@ -703,7 +949,11 @@ body {
   transform: scale(1.07);
 }
 
-.tarjeta:hover {
+.catalogo-lista #comprar {
+  width: 100px;
+}
+
+.catalogo-lista .tarjeta:hover {
   transform: scale(1.01);
   box-shadow: 0px 0px 9px 1px #aeb0b2;
 }
@@ -744,6 +994,105 @@ footer p {
   color: green;
 }
 
+/* *******************************************************************************************/
+
+.ico-filtros-responsive {
+  display: none;
+}
+
+.fil-responsive {
+  display: none;
+}
+
+/*************************************  MEDIA QUERIES  ***************************************/
+
+/*
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+*/
+
+/*************************************************************/
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  
+  .fil-responsive {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(51, 51, 175, 0.5);
+    position: absolute;
+    right: 10px;
+    display: block;
+  }
+
+
+  .menu-vistas {
+    display: none;
+  }
+
+  .ico-filtros-responsive {
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 110px;
+    justify-content: space-evenly;
+    border-radius: 3px;
+  }
+
+}
+
+/*************************************************************/
+
+@media (max-width: 576px) {
+
+
+  .vista-productos {
+    padding: 15px;
+  }
+
+  #vista-productos p {
+    font-size: 13px;
+    font-weight: 300;
+    max-width: 120px;
+
+  }
+
+  .ico-filtros-responsive p {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  
+.tarjeta {
+
+  flex-grow: 1;
+}
+
+
+
+}
+
+/**************************** NUESTRO AMIGO HIDDEN *******************************/
+
+
+
 .hidden {
   display: none;
+}
+
+.no_scroll{
+  overflow: hidden;
 }

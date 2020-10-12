@@ -13,37 +13,281 @@
 
 <body>
 
-    <header class="nav-bar" aria-hidden="true" aria-label="Bienvenide a ADA Shop">
 
-        <div class="logo">
-            <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset="""> </div>
+
+    <header class="nav-bar" aria-label="Bienvenide a ADA Shop">
+
+        <div class="logo" aria-hidden="true">
+            <div class="LogoAda"> <img id="LogoAda" src="ICONOS/Logo ADA.png" alt="" srcset="" aria-hidden="true">
+            </div>
 
             <div>
-                <h1> ADA SHOP </h1>
+                <p> ADA SHOP </p>
             </div>
 
         </div>
 
 
 
-        <div class=" carrito" aria-label="Carrito de compras">
-                <div id="crt"> <i class="fas fa-shopping-cart" aria-hidden="true"></i> </div>
-                <div>
-                    <p id="abrir-carrito" role="button">Carrito (0 Items)</p>
-                </div>
+        <div class=" carrito">
+            <div id="crt"> <i class="fas fa-shopping-cart" aria-hidden="true"></i> </div>
+            <div>
+                <p id="abrir-carrito" role="button" aria-label="Ver carrito de compras">Carrito (0 Items)</p>
             </div>
+        </div>
 
     </header>
+
+
 
     <!-- ---------------------------- MODAL CARRITO DE COMPRA ---------------------------- -->
 
     <aside>
         <div class="overlay hidden" id="overlay">
-            <div class="menu-compra" id="menu-compra">
+            <div class="menu-compra">
                 <p>Carrito</p>
-                <p id="descripcion-carrito"> No tienes productos en el carrito, <br> ¡agrega algunos!</p>
+                <div class="productos-agregados" id="menu-compra"></div>
+                <p class="leyenda hidden" id="descripcion-carrito"> No tienes productos en el carrito, <br> ¡agrega
+                    algunos!
+                </p>
                 <i id="cerrar" class="far fa-times-circle"></i>
+
+                <div class="carrito-footer">
+                    <div class="subtotal-carrito">
+                        <p>SUBTOTAL:</p>
+                    </div>
+                    <div class="botones-comprar-vaciar">
+                        <div><button id="carrito-comprar">COMPRAR</button  id="carrito-comprar"></div>
+                        <div><button id="carrito-vaciar">VACIAR</button id="carrito-vaciar"></div>
+                    </div>
+                </div>
+
+
+                <!--  --------------------------- MODAL VACIAR CARRITO -------------------------------->
+
+
+
+
+                <!-- ---------------------------- TARJETAS DE PRODUCTO ---------------------------- -->
+
+
+                <div class="item hidden" id="ver-samsung-1" data-nombre="samsung-1">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Celular Samsung</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung1"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">22.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="item hidden" id="ver-item-play" data-nombre="playstation">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Play Station</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">132.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="item hidden" id="ver-item-nokia" data-nombre="nokia">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Celular Nokia</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="item-samsung-2" data-nombre="samsung-2">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Celular Samsung</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="item-iphone" data-nombre="iphone">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Iphone X</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="camara-canon" data-nombre="canon">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Camara Canon</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="item-xiaomi" data-nombre="xiaomi">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Celular Xiaomi</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="mac" data-nombre="mac">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Mac Book Air</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item hidden" id="headphones-sony" data-nombre="headphones">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+
+                    <div class="carr-desc">
+                        <div class="carr-title">
+                            <div class="carr-nombre">
+                                <p>Headphones Sony</p>
+                            </div>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="ico-samsung2"></i>
+                            </div>
+                        </div>
+                        <div class="carr-unidades">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                                <p>Unidades</p>
+                            </div>
+                            <div class="unid-finales">
+                                $ <span id="unid-finales-samsung">53.500</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+        </div>
         </div>
     </aside>
 
@@ -128,29 +372,53 @@
         </div>
     </aside>
 
+    <!--  --------------------------MODAL VACIAR ------------------------------------------------------->
+
+
+    <aside>
+        <div class="overlay-vaciar"  id="overlay-vaciar">
+        <div class="modal-vaciar">
+            <p>Estas por vaciar el carrito, quieres continuar?</p>
+
+            <div class="botones-vaciar">
+                <button class="cancelar" id="boton-modal-cancelar">
+                    <p>CANCELAR</p>
+                </button>
+                <button class="vaciar" id="boton-modal-vaciar">
+                    <p>VACIAR</p>
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+    </aside>
+    <!--   --------------------------------------------------------------------------       -->
+
     <!-- ---------------------------- PORTADA PRINCIPAL CATEGORIA ---------------------------- -->
 
 
     <section class="home" aria-label="Seccion de productos de electrónica">
         <div class="titulo">
-            <p>ELECTRÓNICA</p>
+            <h1>ELECTRÓNICA</h1>
         </div>
         <div class="degradado"> </div>
-        <div class="contenedor-fondo"> <img src="IMAGENES/fondo4.png" srcset="" id="fondo"> </div>
+        <div class="contenedor-fondo"> <img src="IMAGENES/fondo4.png" srcset="" id="fondo"></div>
     </section>
+
 
 
 
     <!-- ---------------------------- SECCION DE FILTROS DE BUSQUEDA ---------------------------- -->
 
-    <section class="principal" aria-label="Catalogo de productos">
+    <section class="principal">
 
-        <div class="menu">
+        <div class="menu" aria-label="Filtros de búsqueda">
             <div class="filtro">
                 <div id="f"> FILTROS </div>
                 <div id="l">
-                    <div> <i class="fas fa-trash-alt"></i></div>
-                    <div> <button id='limpieza'>Limpiar</button></div>
+                    <div> <i class="fas fa-trash-alt" aria-hidden="true"></i></div>
+                    <div> <button id='limpieza' aria-label="Limpiar filtros">Limpiar</button></div>
                 </div>
             </div>
 
@@ -158,9 +426,10 @@
             <div class="busqueda">
                 <div class="titulo"> <label for="idbusqueda"> BUSQUEDA </div>
                 <div class="buscar">
-                    <form id="input-busqueda">
-                        <input type="text" name="busqueda" id="search" placeholder="Buscar productos" />
-                        <div id="lupa"><i class="fas fa-search"></i>
+                    <form id="input-busqueda" role="Buscador">
+                        <input type="text" name="busqueda" id="search" placeholder="Buscar productos"
+                            aria-label="Buscar por nombre" />
+                        <div id="lupa"><i class="fas fa-search" aria-hidden="true"></i>
                         </div>
                     </form>
 
@@ -169,69 +438,78 @@
             </div>
 
 
-            <div class="categoria">
+            <div class="categoria" aria-label="Filtro por categoría">
                 <div class="titulo">CATEGORIA</div>
 
                 <div class="contenedor-items">
-                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="consolas">
+                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="consolas"
+                            aria-label="Consolas">
                         <p>CONSOLAS</p>
                     </div>
-                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="notebooks">
+                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="notebooks"
+                            aria-label="Notebooks">
                         <p>NOTEBOOKS</p>
                     </div>
-                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="camaras">
+                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="camaras"
+                            aria-label="Camaras">
                         <p>CAMARAS</p>
                     </div>
-                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="celulares">
+                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="celulares"
+                            aria-label="Celulares">
                         <p>CELULARES</p>
                     </div>
-                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="accesorios">
+                    <div class="cat-item"><input type="checkbox" name="categoria" class="tipo" value="accesorios"
+                            aria-label="Accesorios">
                         <p>ACCESORIOS</p>
                     </div>
                 </div>
             </div>
 
 
-            <div class="puntaje">
+            <div class="puntaje" aria-label="Filtro por puntaje">
                 <div class="titulo">PUNTAJE</div>
 
                 <div class="contenedor-items">
 
                     <div class="cat-item">
-                        <input type="checkbox" name="puntaje" value=5 class="review" id="checkbox-1">
+                        <input type="checkbox" name="puntaje" value=5 class="review" id="checkbox-1"
+                            aria-label="Calificación 5 estrellas">
                         <div class="grupo">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
                         </div>
                         <p>(5)</p>
                     </div>
 
                     <div class="cat-item">
-                        <input type="checkbox" name="puntaje" value=4 class="review" id="checkbox-4">
+                        <input type="checkbox" name="puntaje" value=4 class="review" id="checkbox-4"
+                            aria-label="Calificación 4 estrellas">
                         <div class="grupo"><i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
                         </div>
                         <p>(4)</p>
                     </div>
 
                     <div class="cat-item">
-                        <input type="checkbox" name="puntaje" value=3 class="review" id="checkbox-3">
+                        <input type="checkbox" name="puntaje" value=3 class="review" id="checkbox-3"
+                            aria-label="Calificación 3 estrellas">
                         <div class="grupo"> <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
+                            <i class="far fa-star" aria-hidden="true"></i>
                         </div>
                         <p>(3)</p>
                     </div>
 
-                    <div class="cat-item"><input type="checkbox" name="puntaje" value=2 class="review" id="checkbox-2">
+                    <div class="cat-item"><input type="checkbox" name="puntaje" value=2 class="review" id="checkbox-2"
+                            aria-label="Calificación 2 estrellas">
                         <div class="grupo">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -242,7 +520,8 @@
                         <p>(2)</p>
                     </div>
 
-                    <div class="cat-item"><input type="checkbox" name="puntaje" value=1 class="review" id="checkbox-1">
+                    <div class="cat-item"><input type="checkbox" name="puntaje" value=1 class="review" id="checkbox-1"
+                            aria-label="Calificación 1 estrella">
                         <div class="grupo">
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
@@ -259,12 +538,22 @@
         </div>
 
 
+        <!--  FILTRO RESPONSIVE   -->
+
+        <div class="fil-responsive hidden" id="fil-responsive">
+
+        </div>
+
+
+
+
+
 
         <!-- -------------------------------- VISTA LISTA DE PRODUCTOS ------------------------------------- -->
 
         <main class="shop">
             <div class="vista-productos">
-                <div>
+                <div id="vista-productos">
                     <p> Mostrando 12 productos de 12</p>
                 </div>
                 <div class="menu-vistas">
@@ -272,9 +561,17 @@
                         <p> Ver como </p>
                     </div>
                     <div>
-                        <i class="fas fa-th" id="vista-grilla"></i> </div>
+                        <i class="fas fa-th" id="vista-grilla" aria-label="Vista grilla"></i> </div>
                     <div>
-                        <i class="fas fa-th-list" id="vista-lista"></i></div>
+                        <i class="fas fa-th-list" id="vista-lista" aria-label="Calificación 5 estrellas"></i></div>
+                </div>
+                <div class="ico-filtros-responsive">
+                    <div>
+                        <p>FILTROS</p>
+                    </div>
+                    <div id="ico-filtros-responsive">
+                        <i class="fas fa-filter" id="vista-grilla" aria-label="Vista grilla" id="embudo"></i> </div>
+
                 </div>
             </div>
 
@@ -282,20 +579,27 @@
             <!-- ---------------------------- SECCION PRINCIPAL DE PRODUCTOS ---------------------------- -->
             <!-- ---------------------------- SECCION VISTAS LISTA O GRILLA  ---------------------------- -->
 
-            <!--
 
-            <div class="catalogo" id="catalogo-grilla">
-                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="22000"
-                    data-rating="4">
+
+            <div class="catalogo" id="catalogo-grilla" aria-label="Galeria de productos">
+
+                <div class="tarjeta" data-nombre="celular samsung 2" data-categoria="celulares" data-precio="22000"
+                    data-rating="4" aria-label="Celular Samsung, precio $22.000">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung">
                     </div>
-                    <div class="desc-producto">
+                    <div class="desc-producto" id="desc-producto">
                         <div class="title">
                             <p>Celular Samsung</p>
                         </div>
                         <div class="precio">
                             <p>$22.000</p>
                         </div>
+                        <div class="texto-descriptivo hidden">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
                         <div class="calificacion">
                             <div class="stars">
                                 <div><i class="fas fa-star"></i></div>
@@ -305,23 +609,32 @@
                                 <div><i class="far fa-star"></i></div>
                             </div>
                         </div>
+                        <div>
+                            <button class="comprar" id="compra-samsung-1" data-nombre="samsung-1">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
 
                     </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
+
                 </div>
 
                 <div class="tarjeta" data-nombre="play station sony" data-categoria="consolas" data-precio="30000"
                     data-rating="4">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/play.jpg" alt="Play Station"> </div>
-                    <div class="desc-producto">
+                    <div class="desc-producto" id="desc-producto">
                         <div class="title">
                             <p>Play Station Sony</p>
                         </div>
                         <div class="precio">
                             <p>$30.000</p>
                         </div>
+                        <div class="texto-descriptivo hidden">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
                         <div class="calificacion">
                             <div class="stars">
                                 <div><i class="fas fa-star"></i></div>
@@ -331,24 +644,33 @@
                                 <div><i class="far fa-star"></i></div>
                             </div>
                         </div>
+                        <div>
+                            <button class="comprar" id="compra-play">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
 
                     </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
+
                 </div>
 
                 <div class="tarjeta" data-nombre="celular nokia" data-categoria="celulares" data-precio="32500"
                     data-rating="5">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg" alt="Celular Nokia">
                     </div>
-                    <div class="desc-producto">
+                    <div class="desc-producto" id="desc-producto">
                         <div class="title">
                             <p>Celular Nokia</p>
                         </div>
                         <div class="precio">
                             <p>$32.500</p>
                         </div>
+                        <div class="texto-descriptivo hidden">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
+                                itaque esse tempora sed repellat enim officiis,
+                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
+                                quasi.</p>
+                        </div>
                         <div class="calificacion">
                             <div class="stars">
                                 <div><i class="fas fa-star"></i></div>
@@ -358,313 +680,28 @@
                                 <div><i class="fas fa-star"></i></div>
                             </div>
                         </div>
+                        <div>
+                            <button class="comprar" id="compra-nokia">
+                                <p>COMPRAR</p>
+                            </button>
+                        </div>
 
                     </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
+
                 </div>
 
-                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="56000"
+                <div class="tarjeta" data-nombre="celular-samsung 2" data-categoria="celulares" data-precio="56000"
                     data-rating="4">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg" alt="Celular Samsung">
                     </div>
-                    <div class="desc-producto">
+                    <div class="desc-producto" id="desc-producto">
                         <div class="title">
                             <p>Celular Samsung</p>
                         </div>
                         <div class="precio">
                             <p>$56.000</p>
                         </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-                <div class="tarjeta" data-nombre="iphone" data-categoria="celulares" data-precio="97000"
-                    data-rating="3">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"
-                            alt="Celular Apple modelo Iphone"> </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Iphone X Apple</p>
-                        </div>
-                        <div class="precio">
-                            <p>$97.000</p>
-                        </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-               
-        
-
-
-
-                <div class="tarjeta" data-nombre="camara canon" data-categoria="camaras" data-precio="153000"
-                    data-rating="5">
-                    <div class="foto-producto"> <img class="img-prd" id="cam" src="IMAGENES/camara.jpg" alt="Camara Canon">
-                    </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Camara Reflex Canon</p>
-                        </div>
-                        <div class="precio">
-                            <p>$153.000</p>
-                        </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-
-                <div class="tarjeta" data-nombre="celular xiaomi" data-categoria="celulares" data-precio="22000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/samsung1.jpg" alt="Celular Xiaomi">
-                    </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Celular Xiaomi</p>
-                        </div>
-                        <div class="precio">
-                            <p>$22.000</p>
-                        </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-                <div class="tarjeta" data-nombre="mac book air" data-categoria="notebooks" data-precio="129000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" id="mac" src="IMAGENES/mac.jpg"
-                            alt="Notebook Apple Modelo MacBookAir"> </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>MacBook Air Apple</p>
-                        </div>
-                        <div class="precio">
-                            <p>$129.000</p>
-                        </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-                <div class="tarjeta" data-nombre="headphones sony" data-categoria="accesorios" data-precio="19000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/headphones.jpg"
-                            alt="Headphones Sony"> </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Headphones Sony</p>
-                        </div>
-                        <div class="precio">
-                            <p>$19.000</p>
-                        </div>
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="comprar">
-                        <p>COMPRAR</p>
-                    </button>
-                </div>
-
-            </div>
-
-        </main>
-
-    </section>
-
--->
-
-            <!-- -------------------------------- VISTA LISTA DE PRODUCTOS ------------------------------------- -->
-
-            <div class="catalogo-lista" id="catalogo-lista">
-                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="22000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung">
-                    </div>
-
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Celular Samsung</p>
-                        </div>
-                        <div class="precio">
-                            <p>$22.000</p>
-                        </div>
-
-                        <div class="descripcion">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
-                                itaque esse tempora sed repellat enim officiis,
-                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
-                                quasi.</p>
-                        </div>
-
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="comprar">
-                                <p>COMPRAR</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tarjeta" data-nombre="play station sony" data-categoria="consolas" data-precio="30000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" id="play" src="IMAGENES/play.jpg" alt="Play Station"> </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Play Station Sony</p>
-                        </div>
-                        <div class="precio">
-                            <p>$30.000</p>
-                        </div>
-
-
-                        <div class="descripcion">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
-                                itaque esse tempora sed repellat enim officiis,
-                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
-                                quasi.</p>
-                        </div>
-
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="comprar">
-                                <p>COMPRAR</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tarjeta" data-nombre="celular nokia" data-categoria="celulares" data-precio="32500"
-                    data-rating="5">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 6.jpg" alt="Celular Nokia">
-                    </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Celular Nokia</p>
-                        </div>
-                        <div class="precio">
-                            <p>$53.000</p>
-                        </div>
-
-                        <div class="descripcion">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
-                                itaque esse tempora sed repellat enim officiis,
-                                consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
-                                quasi.</p>
-                        </div>
-
-                        <div class="calificacion">
-                            <div class="stars">
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="fas fa-star"></i></div>
-                                <div><i class="far fa-star"></i></div>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="comprar">
-                                <p>COMPRAR</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="tarjeta" data-nombre="celular samsung" data-categoria="celulares" data-precio="56000"
-                    data-rating="4">
-                    <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular7.jpg" alt="Celular Samsung">
-                    </div>
-                    <div class="desc-producto">
-                        <div class="title">
-                            <p>Celular Samsung</p>
-                        </div>
-                        <div class="precio">
-                            <p>$56.000</p>
-                        </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -680,7 +717,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="cel-samsung-2">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -693,14 +730,14 @@
                     data-rating="3">
                     <div class="foto-producto"> <img class="img-prd" src="IMAGENES/celular 4.jpg"
                             alt="Celular Apple modelo Iphone"> </div>
-                    <div class="desc-producto">
+                    <div class="desc-producto" id="desc-producto">
                         <div class="title">
                             <p>Iphone X Apple</p>
                         </div>
                         <div class="precio">
                             <p>$97.000</p>
                         </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -716,7 +753,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="compra-iphone">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -742,7 +779,7 @@
                         <div class="precio">
                             <p>$153.000</p>
                         </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -758,7 +795,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="compra-camara-canon">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -779,7 +816,7 @@
                         <div class="precio">
                             <p>$22.000</p>
                         </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -795,7 +832,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="compra-xiaomi">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -815,7 +852,7 @@
                         <div class="precio">
                             <p>$129.000</p>
                         </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -831,7 +868,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="compra-mac">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -839,6 +876,8 @@
                     </div>
 
                 </div>
+
+
 
                 <div class="tarjeta" data-nombre="headphones sony" data-categoria="accesorios" data-precio="19000"
                     data-rating="4">
@@ -851,7 +890,7 @@
                         <div class="precio">
                             <p>$19.000</p>
                         </div>
-                        <div class="descripcion">
+                        <div class="texto-descriptivo hidden">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis perspiciatis
                                 itaque esse tempora sed repellat enim officiis,
                                 consectetur sit quia pariatur. Aut enim dignissimos doloremque culpa tenetur. Possimus,
@@ -867,27 +906,27 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar">
+                            <button class="comprar" id="compra-headphones-sony">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
+
                     </div>
 
                 </div>
 
+
+
             </div>
 
             </div>
-
-
-
         </main>
 
     </section>
 
-    </main>
 
-    </section>
+
+
 
 
     <!-- ---------------------------- MODAL CONFIRMACION PRODUCTO AGREGADO ---------------------------- -->
@@ -907,7 +946,6 @@
 
 
     <!-- ---------------------------- MODAL CONFIRMACION VACIAR CARRITO ---------------------------- -->
-
 
 
 
