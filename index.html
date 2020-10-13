@@ -32,7 +32,7 @@
         <div class=" carrito">
             <div id="crt"> <i class="fas fa-shopping-cart" aria-hidden="true"></i> </div>
             <div>
-                <p id="abrir-carrito" role="button" aria-label="Ver carrito de compras">Carrito (0 Items)</p>
+                <p id="abrir-carrito" role="button" aria-label="Ver carrito de compras">Carrito ( </p> <span id="total-carrito"> 0 </span> <p>Items)</p>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
 
 
 
-                <!-- ---------------------------- TARJETAS DE PRODUCTO ---------------------------- -->
+                <!-- ---------------------------- TARJETAS DE PRODUCTO EN CARRITO ---------------------------- -->
 
 
                 <div class="item hidden" id="ver-samsung-1" data-nombre="samsung-1">
@@ -87,11 +87,11 @@
 
                         <div class="carr-unidades">
                             <div class="carr-input">
-                                <input type="number" id="value-pc" min=1 id="input-1">
+                                <input type="number" id="value-1" min=1 id="input-1" value=1 >
                                 <p>unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="precio-1">22.500</span> </div>
                             </div>
                         </div>
 
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -186,7 +186,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -210,7 +210,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -234,7 +234,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -258,7 +258,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -282,7 +282,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1">
+                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -313,9 +313,9 @@
                             <p>Datos Personales</p>
                             <form class="nombre-y-mail">
                                 <label id="nombreyapellido"> Nombre y Apellido* <br> <input type="text"
-                                        placeholder="p ej.: Ada Lovelace" required> </label> <br>
+                                        placeholder="p ej.: Ada Lovelace" id="nombre-cliente" required > </label> <br>
                                 <label id="email"> E-mail* <br> <input type="email"
-                                        placeholder="p ej.: adalovelace@gmail.com" required> </input> </label>
+                                        placeholder="p ej.: adalovelace@gmail.com" id="mail-cliente" required> </input> </label>
                             </form>
                         </div>
                         <div class="opciones-pago">
@@ -352,10 +352,10 @@
                             <p>Resumen</p>
                         </div>
                         <div class="resumen-subtotal">
-                            <p>Subtotal:</p>
+                            <p>Subtotal:</p><span id="subototal-checkout">0</span>
                         </div>
                         <div class="resumen-total">
-                            <p>Total: </p>
+                            <p>Total: </p><span id="total-checkout">0</span>
                         </div>
                     </div>
 
@@ -561,7 +561,7 @@
         <main class="shop">
             <div class="vista-productos">
                 <div id="vista-productos">
-                    <p> Mostrando <span id="visibles-filtro">12</span> productos de <span  id="total-catalogo">12</span></p>
+                    <p> Mostrando <span id="visibles-filtro">9</span> productos de <span  id="total-catalogo">9</span></p>
                 </div>
                 <div class="menu-vistas">
                     <div>

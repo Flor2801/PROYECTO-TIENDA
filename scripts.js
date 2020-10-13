@@ -38,12 +38,14 @@ vistaLista.onclick = () => {
 
 filtroNombre.oninput = () => {
   filtrarTarjetas ()
+  actualizarVista()
 }
 
 
 for (let tipo of filtroCategoria) { 
   tipo.oninput = () => {
     filtrarTarjetas ()
+    actualizarVista()
   }
 }
 
@@ -51,6 +53,7 @@ for (let tipo of filtroCategoria) {
 for (let punto of filtroRating) {
   punto.oninput = () => {
     filtrarTarjetas ()
+    actualizarVista()
   }
 }
 
@@ -304,8 +307,6 @@ const quitar = document.getElementById("ico-samsung1")
 const footerCarrito = document.getElementById("carrito-footer")
 const eliminaSamsung1 = document.getElementById("prod-elimina")
 
-console.log()
-
 
 const carritoVacio = () => {
   if (carroVacio = 0) {
@@ -316,22 +317,21 @@ const carritoVacio = () => {
   
 }
 
-
-
 agregaSamsung1.onclick = () => {
   carro.classList.remove("hidden")
   itemSamsung1.classList.remove("hidden")
-  itemSamsung1.classList.add("selected") 
+  itemSamsung1.classList.add("comprado") 
   aviso.classList.add("hidden")
   footerCarrito.classList.remove("hidden")
   carro.appendChild(itemSamsung1)
+  actualizarCarrito()
 
- 
 }
 
 eliminaSamsung1.onclick = () => {
   itemSamsung1.classList.add("hidden")
-  itemSamsung1.classList.remove("selected") 
+  itemSamsung1.classList.remove("comprado") 
+  actualizarCarrito()
   carritoVacio()
 }
 
@@ -340,12 +340,12 @@ eliminaSamsung1.onclick = () => {
 const itemPlay = document.getElementById("ver-item-play")
 const agregaPlay = document.getElementById("compra-play")
 
-
 agregaPlay.onclick = () => {
   itemPlay.classList.remove("hidden")
-  itemPlay.classList.add("selected") 
+  itemPlay.classList.add("comprado") 
   aviso.classList.add("hidden")
   carro.appendChild(itemPlay)
+  actualizarCarrito()
 }
 
 
@@ -353,14 +353,13 @@ agregaPlay.onclick = () => {
 const itemNokia = document.getElementById("ver-item-nokia")
 const agregaNokia = document.getElementById("compra-nokia")
 
-
 agregaNokia.onclick = () => {
   itemNokia.classList.remove("hidden")
-  itemNokia.classList.add("selected") 
+  itemNokia.classList.add("comprado") 
   aviso.classList.add("hidden")
   carro.appendChild(itemNokia)
+  actualizarCarrito()
 }
-
 
 
 const itemSamsung2 = document.getElementById("ver-samsung2")
@@ -389,9 +388,7 @@ seguirCheckout.onclick = () => {
   checkout.classList.add("hidden")
 }
 
-finalizarCheckout.onclick = () => {
-  checkout.classList.add("hidden")
-}
+
 
 /*
 const finalizarproceso = () => {
@@ -421,12 +418,21 @@ botonVaciarModal.onclick = () => {
 
 ///////////////////////  VER TOTAL PRODUCTOS FILTRADOS ////////////////////////
 
-"visibles-filtro"
-"total-catalogo"
 
+let productosTotales = document.getElementsByClassName("tarjeta").length
+let productosVisibles = document.getElementsByClassName("selected").length
+let verProductosVisibles = document.getElementById("visibles-filtro")
+let verProductosTotales = document.getElementById("total-catalogo")
 
+console.log(verProductosVisibles)
+console.log(verProductosTotales)
 
-
+const actualizarVista = () => {
+  let productosTotales = document.getElementsByClassName("tarjeta").length
+  let productosVisibles = document.getElementsByClassName("selected").length
+  verProductosVisibles.textContent = productosVisibles
+  verProductosTotales.textContent = productosTotales
+}
 
 
 
@@ -434,30 +440,38 @@ botonVaciarModal.onclick = () => {
 
 
 
+let totalCarrito = document.getElementById("total-carrito")
+let productosComprados = document.getElementsByClassName("comprado").length
+
+actualizarCarrito = () => {
+  let productosComprados = document.getElementsByClassName("comprado").length
+  totalCarrito.textContent = productosComprados
+}
 
 
 
+//////////////////////   SELECCIONAR CANTIDAD DE PRODUCTOS y SUBTOTAL CARRITO  /////////////////////////
 
-
-
-//////////////////////   SELECCION CANTIDAD DE PRODUCTOS  /////////////////////////
-
-const selectorSamsung1 = document.getElementById("input-1")
-const precioSamsung1 = document.getElementById("unid-finales")
+const selector1 = document.getElementById("value-1")
+const precio1 = document.getElementById("precio-1")
 const subtotalCarrito = document.getElementById("subCarrito")
 
+/*
 
-selectorSamsung1.onclick = () => {
-precioFinal1 = precioSamsung1.value*22500
+selector1.onclick = () => {
+precio = parseInt(precio1)
+seleccion = parseInt(selector1.value)
+precioFinal1 = precio*seleccion
 actualizarSubtotal()
 }
 
-//////////////////////   SUBTOTAL CARRITO   /////////////////////////
-
 actualizarSubtotal = () => {
-  subtotalCarrito.textContent = precioFinal1
-
+  subtotalCarrito.textContent = precio1 + precio2 + precio3
 }
+
+actualizarSubtotal del CHECKOUT TAMBIEN
+
+*/
 
 //////////////////////   BOTON ELIMINAR DE LA TARJETA  /////////////////////////
 
@@ -470,5 +484,30 @@ quitar.onclick = () => {
 }
 
 
+//////////////////////     PAGO EN CHECKOUT    ////////////////////////////////////
+
+/*
+const subtotalCheckout = document.getElementById("subototal-checkout")
+const totalCheckout = document.getElementById("total-checkout")
+
+subtotalCheckout.textContent = subtotalCarrito
+
+/// Cada vez que se selecciona un input --> Aparece la leyenda y actualiza el Total de Checkout
+
+totalCheckout.textContent = subtotalCarrito + recargo - descuento + envio
+*/
 
 
+///////////////////  FINALIZAR COMPRA  ///////////////////////////////////////////
+
+const inputNombre = document.getElementById("nombre-cliente")
+const inputMail = document.getElementById("mail-cliente")
+
+
+finalizarCheckout.onclick = () => {
+
+  if (inputNombre == false || inputMail == false) {
+    checkout.classList.remove("hidden");
+  }
+
+}

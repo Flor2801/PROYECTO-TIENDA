@@ -98,6 +98,7 @@ body {
 .carrito p {
   font-size: 18px;
   font-weight: 300;
+  display: inline;
 }
 
 .overlay {
@@ -418,13 +419,17 @@ body {
   font-weight: 900;
 }
 
-.resumen-subtotal p {
+.resumen-subtotal p span {
   margin: 12px;
+  display: block;
 }
 
-.resumen-total p {
+.resumen-total p span {
   margin: 12px;
+  display: inline;
 }
+
+
 
 .botones-checkout {
   background-color: white;
