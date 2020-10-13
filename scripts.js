@@ -71,11 +71,14 @@ const filtrarTarjetas = () => {
 
 
 const mostrarTarjetas = (tarjeta) => {
-  return tarjeta.classList.remove("hidden")
+  tarjeta.classList.remove("hidden");
+  tarjeta.classList.add("selected");
+
 }
 
 const ocultarTarjetas = (tarjeta) => {
-  return tarjeta.classList.add("hidden")
+  tarjeta.classList.add("hidden")
+  tarjeta.classList.remove("selected");
 }
 
 
@@ -416,6 +419,18 @@ botonVaciarModal.onclick = () => {
 }
 
 
+///////////////////////  VER TOTAL PRODUCTOS FILTRADOS ////////////////////////
+
+"visibles-filtro"
+"total-catalogo"
+
+
+
+
+
+
+
+///////////////////////  VER TOTAL PRODUCTOS COMPRADOS ////////////////////////
 
 
 
