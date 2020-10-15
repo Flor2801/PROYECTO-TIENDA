@@ -153,8 +153,9 @@ body {
   flex-direction: column;
 }
 
-.subtotal-carrito > p {
-  margin-bottom: 35px;
+.subtotal-carrito {
+  margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .carrito-footer > .botones-comprar-vaciar {
@@ -172,7 +173,8 @@ body {
 }
 
 .carrito-footer p {
-  font-size: 20px;
+  font-size: 18px;
+  display: inline;
 }
 
 #carrito-comprar #carrito-vaciar {
@@ -959,6 +961,10 @@ body {
 
 .catalogo-lista #play {
   height: 85%;
+}
+
+.catalogo-lista .hidden{
+  display: none;
 }
 
 /*-- ------------------------ FOOTER  --------------------------- */

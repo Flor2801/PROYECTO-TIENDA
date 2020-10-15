@@ -283,7 +283,7 @@ botonFinalizar.onclick = () => {
 }
 
 
-////////////////////////////////   AGRAGR PRODUCTOS AL CARRITO  //////////////////////////////////
+////////////////////////////////   AGREGRAR PRODUCTOS AL CARRITO  //////////////////////////////////
 
 /* TEST ALTERNATIVO
 comprar.onclick = () => {
@@ -298,7 +298,7 @@ for (let item of Items) {
 
 const carro = document.getElementById("menu-compra")
 const aviso = document.getElementById("descripcion-carrito")
-const carroVacio = document.getElementsByTagName("div").length
+
 
 const agregaSamsung1 = document.getElementById("compra-samsung-1")
 const itemSamsung1 = document.getElementById("ver-samsung-1")
@@ -308,10 +308,23 @@ const footerCarrito = document.getElementById("carrito-footer")
 const eliminaSamsung1 = document.getElementById("prod-elimina")
 
 
+const selector1 = document.getElementById("selector value-1")
+const precio1 = document.getElementById("precio-1")
+const subtotalCarrito = document.getElementById("subCarrito")
+
+const selector2 = document.getElementById("selector value-2")
+const subtotalCheckout = document.getElementById("subtotal-checkout")
+const totalCheckout = document.getElementById("total-checkout")
+const Items = document.getElementsByClassName("item")
+
+
+
 const carritoVacio = () => {
-  if (carroVacio = 0) {
+
+  let productosComprados = document.getElementsByClassName("comprado").length
+  if (productosComprados == 0) {
     aviso.classList.remove("hidden")
-    footerCarrito.classList.remove("hidden")
+    footerCarrito.classList.add("hidden")
     carro.classList.add("hidden")
   }
   
@@ -346,6 +359,7 @@ agregaPlay.onclick = () => {
   aviso.classList.add("hidden")
   carro.appendChild(itemPlay)
   actualizarCarrito()
+
 }
 
 
@@ -378,10 +392,12 @@ const finalizarCheckout = document.getElementById("fin-2")
 
 comprar.onclick = () => {
   checkout.classList.remove("hidden")
+  subtotalCheckout.textContent = subtotalCarrito
 }
 
 vaciar.onclick = () => {
   overlayVaciar.classList.remove("hidden")
+  
 }
 
 seguirCheckout.onclick = () => {
@@ -409,10 +425,14 @@ const botonVaciarModal = document.getElementById("boton-modal-cancelar")
 
 botonCancelarModal.onclick = () => {
   overlayVaciar.classList.add("hidden")
+  aviso.classList.remove("hidden")
+  footerCarrito.classList.add("hidden")
+  carro.classList.add("hidden")
 }
 
 botonVaciarModal.onclick = () => {
   overlayVaciar.classList.add("hidden")
+
 }
 
 
@@ -452,36 +472,49 @@ actualizarCarrito = () => {
 
 //////////////////////   SELECCIONAR CANTIDAD DE PRODUCTOS y SUBTOTAL CARRITO  /////////////////////////
 
-const selector1 = document.getElementById("value-1")
-const precio1 = document.getElementById("precio-1")
-const subtotalCarrito = document.getElementById("subCarrito")
 
+ //RESOLVER COMO HACER QUE SE VEA EL VALOR DE LO YA COMPRADO AL ABRIR EL CARRITO
 /*
+comprar.onclick = () => {
+
+  for (let item of Items) {
+    let valor = item.selector.value
+    let valorFinal = valor*100
+    valorFinal = subtotalCarrito.textContent
+  }
+
+}
+*/
 
 selector1.onclick = () => {
-precio = parseInt(precio1)
-seleccion = parseInt(selector1.value)
-precioFinal1 = precio*seleccion
+totalSamsung1 = selector1.value*22500
+subtotalCarrito.textContent = totalSamsung1
 actualizarSubtotal()
 }
 
-actualizarSubtotal = () => {
-  subtotalCarrito.textContent = precio1 + precio2 + precio3
+selector2.onclick = () => {
+totalPlay = selector2.value*50000
+actualizarSubtotal()
 }
 
-actualizarSubtotal del CHECKOUT TAMBIEN
 
+actualizarSubtotal = () => {
+  subtotalCarrito.textContent = (totalSamsung1 + totalPlay)
+  subtotalCheckout.textContent = subtotalCarrito
+}
+
+comprar.onclick = () => {
+  checkout.classList.remove("hidden")
+  subtotalCheckout.textContent = subtotalCarrito
+}
+
+
+/*
+COMO TRANSFORMAR A NUMERO EL DATA PRECIO, NO FUNCIONA NUMBER P PARSE INT
 */
 
+
 //////////////////////   BOTON ELIMINAR DE LA TARJETA  /////////////////////////
-
-
-quitar.onclick = () => {
-  itemSamsung2.classList.add("hidden")
-  itemSamsung2.classList.remove("selected") 
-  celularesTotales.textContent = 0
-  selectorCel.value = 0
-}
 
 
 //////////////////////     PAGO EN CHECKOUT    ////////////////////////////////////
@@ -508,6 +541,8 @@ finalizarCheckout.onclick = () => {
 
   if (inputNombre == false || inputMail == false) {
     checkout.classList.remove("hidden");
+    inputNombre.focus();
+    inputMail.focus();
   }
 
 }

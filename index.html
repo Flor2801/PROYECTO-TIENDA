@@ -54,7 +54,7 @@
 
                 <div class="carrito-footer hidden" id="carrito-footer">
                     <div class="subtotal-carrito">
-                        <p>SUBTOTAL:</p>
+                        <p>SUBTOTAL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                         <p id="subCarrito">0</p>
                     </div>
                     <div class="botones-comprar-vaciar">
@@ -87,7 +87,7 @@
 
                         <div class="carr-unidades">
                             <div class="carr-input">
-                                <input type="number" id="value-1" min=1 id="input-1" value=1 >
+                                <input type="number" id="selector value-1" min=1 value=1 data-precio=22500>
                                 <p>unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" min=1 id="selector value-2" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" id="selector input-2" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" id="selector value-pc" min=1 id="input-1" value=1>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
@@ -313,9 +313,10 @@
                             <p>Datos Personales</p>
                             <form class="nombre-y-mail">
                                 <label id="nombreyapellido"> Nombre y Apellido* <br> <input type="text"
-                                        placeholder="p ej.: Ada Lovelace" id="nombre-cliente" required > </label> <br>
+                                        placeholder="p ej.: Ada Lovelace" id="nombre-cliente" tabindex="1"
+                                        required > </label> <br>
                                 <label id="email"> E-mail* <br> <input type="email"
-                                        placeholder="p ej.: adalovelace@gmail.com" id="mail-cliente" required> </input> </label>
+                                        placeholder="p ej.: adalovelace@gmail.com" id="mail-cliente" tabindex="1" required> </input> </label>
                             </form>
                         </div>
                         <div class="opciones-pago">
@@ -352,7 +353,7 @@
                             <p>Resumen</p>
                         </div>
                         <div class="resumen-subtotal">
-                            <p>Subtotal:</p><span id="subototal-checkout">0</span>
+                            <p>Subtotal:</p><span id="subtotal-checkout">0</span>
                         </div>
                         <div class="resumen-total">
                             <p>Total: </p><span id="total-checkout">0</span>
