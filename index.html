@@ -41,9 +41,8 @@
 
 
     <!-- ---------------------------- MODAL CARRITO DE COMPRA ---------------------------- -->
-
     <aside>
-        <div class="overlay hidden" id="overlay">
+        <div class="overlay hidden" id="overlay"> 
             <div class="menu-compra">
                 <p>Carrito</p>
                 <div class="productos-agregados hidden" id="menu-compra"></div>
@@ -55,7 +54,7 @@
                 <div class="carrito-footer hidden" id="carrito-footer">
                     <div class="subtotal-carrito">
                         <p>SUBTOTAL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                        <p id="subCarrito">0</p>
+                        <p id="subtotal-Carrito">0</p>
                     </div>
                     <div class="botones-comprar-vaciar">
                         <div><button id="carrito-comprar">COMPRAR</button id="carrito-comprar"></div>
@@ -81,17 +80,17 @@
                             <p>Celular Samsung</p>
 
                             <div>
-                                <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                                <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-samsung-1"></i>
                             </div>
                         </div>
 
                         <div class="carr-unidades">
                             <div class="carr-input">
-                                <input type="number" id="selector value-1" min=1 value=1 data-precio=22500>
+                                <input type="number" class="carr-input" id="selector value-1" min=1 value=0 data-precio=22000>
                                 <p>unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="precio-1">22.500</span> </div>
+                                <div> X <br> $ <span id="precio-1">22.000</span> </div>
                             </div>
                         </div>
 
@@ -109,15 +108,15 @@
 
                             <p>Play Station</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-play"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" min=1 id="selector value-2" value=1>
+                            <div class="carr-input"><input type="number" min=1 class="carr-input" id="selector value-2" value=0 data-precio=30000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">30.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -134,15 +133,15 @@
 
                             <p>Celular Nokia</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-nokia"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="selector input-2" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="selector value-3" min=1 id="input-1" value=0 data-precio=32500>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">32.500</span> </div>
                             </div>
                         </div>
                     </div>
@@ -150,23 +149,23 @@
 
 
 
-                <div class="item hidden" id="item-samsung-2" data-nombre="samsung-2">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                <div class="item hidden" id="ver-item-samsung-2" data-nombre="samsung-2">
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular7.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Celular Samsung</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-samsung-2"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="selector value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="selector value-4" min=1 id="input-1" value=0 data-precio=56000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">56.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -175,22 +174,22 @@
 
 
                 <div class="item hidden" id="item-iphone" data-nombre="iphone">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular 4.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Iphone X</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-iphone"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="value-pc" min=1 id="input-1" value=0 data-precio=97000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">97.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -199,22 +198,22 @@
 
 
                 <div class="item hidden" id="camara-canon" data-nombre="canon">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/camara.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Camara Canon</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-canon"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="value-pc" min=1 id="input-1" value=0 data-precio=153000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">153.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -223,22 +222,22 @@
 
 
                 <div class="item hidden" id="item-xiaomi" data-nombre="xiaomi">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/samsung1.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Celular Xiaomi</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-xiaomi"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="value-pc" min=1 id="input-1" value=0 data-precio=22000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">22.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -247,22 +246,22 @@
 
 
                 <div class="item hidden" id="mac" data-nombre="mac">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/mac.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Mac Book Air</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-mac"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="value-pc" min=1 id="input-1" value=0 data-precio=129000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">129.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -271,22 +270,22 @@
 
 
                 <div class="item hidden" id="headphones-sony" data-nombre="headphones">
-                    <div class="carr-img"><img class="img-prd" src="IMAGENES/celular3.jpg" alt="Celular Samsung"></div>
+                    <div class="carr-img"><img class="img-prd" src="IMAGENES/headphones.jpg" alt="Celular Samsung"></div>
 
                     <div class="carr-desc">
                         <div class="titulo-prod">
 
                             <p>Headphones Sony</p>
 
-                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="prod-elimina"></i>
+                            <div id="quitar-prod"> <i class="fas fa-trash-alt" aria-hidden="true" id="elimina-headphones"></i>
                             </div>
                         </div>
                         <div class="carr-unidades">
-                            <div class="carr-input"><input type="number" id="value-pc" min=1 id="input-1" value=1>
+                            <div class="carr-input"><input type="number" class="carr-input" id="value-pc" min=1 id="input-1" value=0 data-precio=19000>
                                 <p>Unidades</p>
                             </div>
                             <div class="unid-finales">
-                                <div> X <br> $ <span id="unid-finales">22.500</span> </div>
+                                <div> X <br> $ <span id="unid-finales">19.000</span> </div>
                             </div>
                         </div>
                     </div>
@@ -313,32 +312,31 @@
                             <p>Datos Personales</p>
                             <form class="nombre-y-mail">
                                 <label id="nombreyapellido"> Nombre y Apellido* <br> <input type="text"
-                                        placeholder="p ej.: Ada Lovelace" id="nombre-cliente" tabindex="1"
-                                        required > </label> <br>
-                                <label id="email"> E-mail* <br> <input type="email"
-                                        placeholder="p ej.: adalovelace@gmail.com" id="mail-cliente" tabindex="1" required> </input> </label>
-                            </form>
+                                        placeholder="p ej.: Ada Lovelace" id="nombre-cliente" tabindex="1" required > </label> <br>
+                                <label id="email"> E-mail* <br> <input type="email" placeholder="p ej.: adalovelace@gmail.com" id="mail-cliente" tabindex="1" required> </input> </label>
+                            
                         </div>
                         <div class="opciones-pago">
 
 
-                            <div class="opciones-lista">
+                            <div class="opciones-lista" class="pago-y-envio">
                                 <p>Opciones de pago</p>
-                                <form class="pago-y-envio">
-                                    <label><input type="radio" name="forma de pago" checked> Efectivo
+                                
+                                    <label><input type="radio" name="forma de pago" class="forma-de-pago" id="check-efectivo"> Efectivo
                                         </input><br></label>
-                                    <label><input type="radio" name="forma de pago"> Tarjeta de credito </input><br>
+                        
+                                    <label><input type="radio" name="forma de pago" class="forma-de-pago" id="check-tarjeta"> Tarjeta de credito </input><br>
                                     </label>
-                                    <label><input type="checkbox"> Necesito envio </input><br> </label>
-                                    <label><input type="checkbox"> Tengo tarjeta de descuento </input><br>
-                                </form>
+                                    <label><input type="checkbox" class="forma-de-pago" id="check-envio"> Necesito envio </input><br> </label>
+                                    <label><input type="checkbox" class="forma-de-pago" id="check-descuento"> Tengo tarjeta de descuento </input><br>
+                                
                             </div>
 
                             <div class="ref-opciones">
                                 <ul>
                                     <li>+10% Recargo</li>
-                                    <li>+ $50 Recargo</li>
-                                    <li>- 10% Descuento</li>
+                                    <li>+ $300 Recargo</li>
+                                    <li>- 5% Descuento</li>
 
                                 </ul>
                             </div>
@@ -353,10 +351,14 @@
                             <p>Resumen</p>
                         </div>
                         <div class="resumen-subtotal">
-                            <p>Subtotal:</p><span id="subtotal-checkout">0</span>
+                            <p>Subtotal:<span id="subtotal-checkout">0</span></p> <br>
+
+                            <p class="hidden" id="recargo-leyenda">Recargo +10%:<span id="recargo-valor">0</span></p>
+                            <p class="hidden" id="envio-leyenda">Envío:<span id="envio-valor" >0</span></p>
+                            <p class="hidden" id="descuento-leyenda">Descuento -5%:<span  id="descuento-valor">0</span></p>
                         </div>
                         <div class="resumen-total">
-                            <p>Total: </p><span id="total-checkout">0</span>
+                            <p>Total: <span id="total-checkout">0</span></p>
                         </div>
                     </div>
 
@@ -366,12 +368,15 @@
 
                 <div class="botones-checkout">
 
-                    <button class="seguir fin" id="fin-1">
+
+                        <button type="button" class="seguir fin" id="fin-1">
                         <p>SEGUIR COMPRANDO</p>
                     </button>
-                    <button class="finalizar fin" id="fin-2">
+                    
+                        <button  type="submit" class="finalizar fin" id="fin-2">
                         <p>FINALIZAR</p>
                     </button>
+                </form>
 
                 </div>
 
@@ -403,6 +408,11 @@
     </aside>
     <!--   --------------------------------------------------------------------------       -->
 
+
+
+    
+
+
     <!-- ---------------------------- PORTADA PRINCIPAL CATEGORIA ---------------------------- -->
 
 
@@ -421,11 +431,11 @@
 
     <section class="principal">
 
-        <div class="menu" aria-label="Filtros de búsqueda">
+        <div class="menu" aria-label="Filtros de búsqueda" id="menu-filtros">
             <div class="filtro">
                 <div id="f"> FILTROS </div>
                 <div id="l">
-                    <div> <i class="fas fa-trash-alt" aria-hidden="true"></i></div>
+                    <div> <i class="fas fa-trash-alt" aria-hidden="true" id="trash"></i></div>
                     <div> <button id='limpieza' aria-label="Limpiar filtros">Limpiar</button></div>
                 </div>
             </div>
@@ -548,9 +558,11 @@
 
         <!--  FILTRO RESPONSIVE   -->
 
-        <div class="fil-responsive hidden" id="fil-responsive">
+      
 
-        </div>
+     
+
+        
 
 
 
@@ -653,7 +665,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-play">
+                            <button class="comprar" id="compra-play" data-nombre="playstation">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -689,7 +701,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-nokia">
+                            <button class="comprar" id="compra-nokia" data-nombre="nokia">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -725,7 +737,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="cel-samsung-2">
+                            <button class="comprar" id="compra-samsung-2" data-nombre="samsung-2">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -761,7 +773,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-iphone">
+                            <button class="comprar" id="compra-iphone" data-nombre="iphone">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -803,7 +815,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-camara-canon">
+                            <button class="comprar" id="compra-canon" data-nombre="canon">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -840,7 +852,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-xiaomi">
+                            <button class="comprar" id="compra-xiaomi" data-nombre="xiaomi">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -876,7 +888,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-mac">
+                            <button class="comprar" id="compra-mac" data-nombre="mac">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
@@ -914,7 +926,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="comprar" id="compra-headphones-sony">
+                            <button class="comprar" id="compra-headphones-sony" data-nombre="headphones">
                                 <p>COMPRAR</p>
                             </button>
                         </div>
